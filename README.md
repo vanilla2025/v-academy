@@ -1,12 +1,21 @@
 # V | Academy
 
-## Version 3.2.1 - Fixed Single File Build
 
-This build fixes the blank screen issue caused by broken JavaScript in the previous v3.2 file.
+## Version 3.2 - Production Toolbox Prompts
 
-Use this as the safe GitHub upload version:
-- `index.html`
-- `assets/vanilla-logo.png`
-- `apps-script/Code.gs` optional, only update if needed
+This release replaces placeholder Toolbox prompts with production-style Vanilla workflows.
 
-No Code.gs update is required for normal content changes.
+Changes:
+- Removed the generic one-line workflow prompts.
+- Removed Inspection Comments from Toolbox because that belongs in the Inspection Report Agent.
+- Added Inspection Follow-up Planner for post-inspection action organisation.
+- Added Lease Renewal Prep, Difficult Conversation Prep and Owner Update Pack.
+- Every Toolbox workflow now includes:
+  - Trigger moment
+  - When to use it
+  - When not to use it
+  - Required inputs
+  - Output format
+  - Review checklist
+
+No Code.gs update required.
