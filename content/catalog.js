@@ -1351,74 +1351,92 @@ window.ACADEMY_CATALOG = {
     {
       "title": "Daily Startup",
       "category": "Workflow",
-      "description": "Reusable Vanilla workflow. Open from Toolbox or pin to sidebar.",
-      "prompt": "Use this workflow for Daily Startup. Ask me for missing details first, then produce a practical output with a review checklist."
+      "description": "Trigger: start of day, after leave, or before a busy inspection/appraisal day.",
+      "prompt": "You are assisting a Vanilla Rentals staff member.\n\nWorkflow: Daily Startup\n\nTrigger moment:\nI am starting my day and need to quickly understand what needs attention before the day runs away from me.\n\nUse when:\n- First thing in the morning\n- Before a busy inspection or appraisal day\n- After returning from leave\n- When I feel behind before the day starts\n\nDo not use when:\n- I need urgent legal/compliance advice\n- I want AI to send, archive, move, or cancel anything without review\n\nRequired inputs:\n- Role\n- Calendar summary or connected Calendar\n- Important emails or connected Gmail\n- Known appointments\n- Known urgent matters\n\nMy context:\n[PASTE NOTES / EMAILS / CALENDAR DETAILS / PROPERTY CONTEXT HERE]\n\nPlease produce:\n1. Today’s priority list grouped into Urgent / Important / Later / Waiting on Others\n2. Appointment preparation list\n3. Likely follow-ups or promises\n4. Suggested work order\n5. Items to verify manually\n\nReview checklist:\n- Priorities make sense\n- No unsupported assumptions\n- No appointments changed\n- Urgent matters are escalated appropriately\n\nImportant:\nDo not invent facts, dates, approvals, legislation, rent figures, trade advice, or decisions. Flag anything that needs human verification."
     },
     {
       "title": "Owner Follow-up",
-      "category": "Workflow",
-      "description": "Reusable Vanilla workflow. Open from Toolbox or pin to sidebar.",
-      "prompt": "Use this workflow for Owner Follow-up. Ask me for missing details first, then produce a practical output with a review checklist."
+      "category": "PM Workflow",
+      "description": "Trigger: after an owner call, appraisal, maintenance discussion, rent review or unresolved owner email.",
+      "prompt": "You are assisting a Vanilla Rentals staff member.\n\nWorkflow: Owner Follow-up\n\nTrigger moment:\nI need to send an owner a clear follow-up after a conversation, update, approval request, or unresolved matter.\n\nUse when:\n- After owner calls\n- After maintenance updates\n- After inspections\n- After rent review conversations\n- When owner decision is needed\n\nDo not use when:\n- Facts are not checked\n- The matter needs management approval\n- The message could create a legal/compliance issue\n\nRequired inputs:\n- Owner name\n- Property\n- Issue\n- Current status\n- Decision needed\n- Tone required\n\nMy context:\n[PASTE NOTES / EMAILS / CALENDAR DETAILS / PROPERTY CONTEXT HERE]\n\nPlease produce:\n1. Owner email under 220 words\n2. Short SMS version\n3. Internal PropertyMe note\n4. Follow-up task suggestion\n5. Risk wording check\n\nReview checklist:\n- Facts verified\n- No promises added\n- Next step clear\n- Tone appropriate\n- Decision needed is obvious\n\nImportant:\nDo not invent facts, dates, approvals, legislation, rent figures, trade advice, or decisions. Flag anything that needs human verification."
     },
     {
       "title": "Calendar Planner",
-      "category": "Workflow",
-      "description": "Reusable Vanilla workflow. Open from Toolbox or pin to sidebar.",
-      "prompt": "Use this workflow for Calendar Planner. Ask me for missing details first, then produce a practical output with a review checklist."
+      "category": "Connected Apps",
+      "description": "Trigger: before a busy day, weekly planning, inspection scheduling, or finding time for admin work.",
+      "prompt": "You are assisting a Vanilla Rentals staff member.\n\nWorkflow: Calendar Planner\n\nTrigger moment:\nI need to turn calendar events into a practical work plan with preparation and follow-up time.\n\nUse when:\n- Planning today\n- Planning tomorrow\n- Weekly workload review\n- Finding focus blocks\n- Preparing appointments\n\nDo not use when:\n- Travel time is unknown\n- Appointments may need manager approval before moving\n- I want AI to create or move events without review\n\nRequired inputs:\n- Calendar details or connected Calendar\n- Work goal\n- Any travel constraints\n- Important tasks\n\nMy context:\n[PASTE NOTES / EMAILS / CALENDAR DETAILS / PROPERTY CONTEXT HERE]\n\nPlease produce:\n1. Calendar summary\n2. Preparation plan by appointment\n3. Risk scan for conflicts/gaps\n4. Suggested focus blocks\n5. Manual confirmation checklist\n\nReview checklist:\n- No event moved without approval\n- Travel reality checked\n- Important tasks included\n- Conflicts reviewed\n\nImportant:\nDo not invent facts, dates, approvals, legislation, rent figures, trade advice, or decisions. Flag anything that needs human verification."
     },
     {
       "title": "Gmail Follow-up Finder",
-      "category": "Workflow",
-      "description": "Reusable Vanilla workflow. Open from Toolbox or pin to sidebar.",
-      "prompt": "Use this workflow for Gmail Follow-up Finder. Ask me for missing details first, then produce a practical output with a review checklist."
+      "category": "Connected Apps",
+      "description": "Trigger: when replies, promises, owner updates or maintenance follow-ups may be slipping.",
+      "prompt": "You are assisting a Vanilla Rentals staff member.\n\nWorkflow: Gmail Follow-up Finder\n\nTrigger moment:\nI need to identify conversations where I may owe someone a reply or follow-up.\n\nUse when:\n- Inbox cleanup\n- After leave\n- End of day\n- Owner follow-up review\n- Maintenance follow-up review\n\nDo not use when:\n- I want AI to delete/archive/send without review\n- The matter needs legal or management judgement\n\nRequired inputs:\n- Search scope\n- Role\n- Priority contacts if any\n- Date range\n\nMy context:\n[PASTE NOTES / EMAILS / CALENDAR DETAILS / PROPERTY CONTEXT HERE]\n\nPlease produce:\n1. Likely overdue replies\n2. Promises I may have made\n3. Waiting-on-others list\n4. Top 3 draft replies\n5. Review checklist\n\nReview checklist:\n- Every suggested reply reviewed\n- Sender/context checked\n- No automatic sending\n- Urgent items escalated\n\nImportant:\nDo not invent facts, dates, approvals, legislation, rent figures, trade advice, or decisions. Flag anything that needs human verification."
     },
     {
       "title": "Meeting Notes Cleaner",
-      "category": "Workflow",
-      "description": "Reusable Vanilla workflow. Open from Toolbox or pin to sidebar.",
-      "prompt": "Use this workflow for Meeting Notes Cleaner. Ask me for missing details first, then produce a practical output with a review checklist."
+      "category": "Admin Workflow",
+      "description": "Trigger: after meetings, training sessions, phone calls or management discussions with messy notes.",
+      "prompt": "You are assisting a Vanilla Rentals staff member.\n\nWorkflow: Meeting Notes Cleaner\n\nTrigger moment:\nI have rough notes and need clear minutes, decisions and action items.\n\nUse when:\n- After meetings\n- After training\n- After phone calls\n- When notes need to become tasks\n\nDo not use when:\n- Decisions were not actually made\n- Sensitive matters should not be shared\n- Notes are too incomplete to rely on\n\nRequired inputs:\n- Rough notes\n- Attendees if known\n- Meeting purpose\n- Any known due dates\n\nMy context:\n[PASTE NOTES / EMAILS / CALENDAR DETAILS / PROPERTY CONTEXT HERE]\n\nPlease produce:\n1. Meeting summary\n2. Decisions made\n3. Action items table\n4. Open questions\n5. Follow-up message\n\nReview checklist:\n- No invented decisions\n- Action owners checked\n- Due dates verified\n- Sensitive content removed\n\nImportant:\nDo not invent facts, dates, approvals, legislation, rent figures, trade advice, or decisions. Flag anything that needs human verification."
     },
     {
       "title": "Maintenance Summary",
-      "category": "Workflow",
-      "description": "Reusable Vanilla workflow. Open from Toolbox or pin to sidebar.",
-      "prompt": "Use this workflow for Maintenance Summary. Ask me for missing details first, then produce a practical output with a review checklist."
+      "category": "PM Workflow",
+      "description": "Trigger: new maintenance request, owner approval, trade follow-up or messy maintenance thread.",
+      "prompt": "You are assisting a Vanilla Rentals staff member.\n\nWorkflow: Maintenance Summary\n\nTrigger moment:\nA maintenance issue needs to be summarised, clarified, approved, briefed to a trade, or followed up.\n\nUse when:\n- Tenant maintenance request\n- Owner approval needed\n- Trade update received\n- Maintenance thread is messy\n\nDo not use when:\n- Emergency action is needed immediately\n- I need technical diagnosis without trade evidence\n- Responsibility/liability is unclear\n\nRequired inputs:\n- Property\n- Tenant/trade/owner notes\n- Photos if described\n- Known urgency\n- Approval status\n\nMy context:\n[PASTE NOTES / EMAILS / CALENDAR DETAILS / PROPERTY CONTEXT HERE]\n\nPlease produce:\n1. Maintenance summary\n2. Missing information\n3. Urgency estimate\n4. Tenant reply\n5. Owner approval request\n6. Trade brief\n7. PM action checklist\n\nReview checklist:\n- No technical diagnosis invented\n- Urgency not overstated\n- Owner approval clear\n- Tenant/trade details checked\n\nImportant:\nDo not invent facts, dates, approvals, legislation, rent figures, trade advice, or decisions. Flag anything that needs human verification."
     },
     {
-      "title": "Inspection Comments",
-      "category": "Workflow",
-      "description": "Reusable Vanilla workflow. Open from Toolbox or pin to sidebar.",
-      "prompt": "Use this workflow for Inspection Comments. Ask me for missing details first, then produce a practical output with a review checklist."
+      "title": "Inspection Follow-up Planner",
+      "category": "PM Workflow",
+      "description": "Trigger: after using Inspection Report Agent and needing tenant/owner/PM follow-up actions.",
+      "prompt": "You are assisting a Vanilla Rentals staff member.\n\nWorkflow: Inspection Follow-up Planner\n\nTrigger moment:\nAn inspection report or inspection summary has been reviewed and needs follow-up actions.\n\nUse when:\n- After using Inspection Report Agent\n- After routine inspection\n- After exit inspection review\n- When owner/tenant follow-up is needed\n\nDo not use when:\n- The full inspection report still needs to be generated\n- I have not reviewed photos/notes\n- The issue is urgent/safety-related\n\nRequired inputs:\n- Inspection summary\n- Key findings\n- Property\n- Tenant actions\n- Maintenance items\n\nMy context:\n[PASTE NOTES / EMAILS / CALENDAR DETAILS / PROPERTY CONTEXT HERE]\n\nPlease produce:\n1. Tenant follow-up items\n2. Owner summary\n3. Maintenance items\n4. PM action checklist\n5. Risk wording check\n\nReview checklist:\n- Does not duplicate Inspection Report Agent\n- Only uses observed facts\n- Maintenance separated from housekeeping\n- Unsupported claims removed\n\nImportant:\nDo not invent facts, dates, approvals, legislation, rent figures, trade advice, or decisions. Flag anything that needs human verification."
     },
     {
       "title": "QCAT Timeline",
-      "category": "Workflow",
-      "description": "Reusable Vanilla workflow. Open from Toolbox or pin to sidebar.",
-      "prompt": "Use this workflow for QCAT Timeline. Ask me for missing details first, then produce a practical output with a review checklist."
+      "category": "Compliance Workflow",
+      "description": "Trigger: dispute is escalating and facts, dates, evidence and gaps need structure.",
+      "prompt": "You are assisting a Vanilla Rentals staff member.\n\nWorkflow: QCAT Timeline\n\nTrigger moment:\nA tenancy matter may need tribunal preparation and I need a clear chronology and evidence checklist.\n\nUse when:\n- Dispute escalation\n- Before QCAT preparation\n- Evidence review\n- Timeline building\n\nDo not use when:\n- I need legal advice\n- Facts/dates/notices have not been verified\n- Matter needs management escalation first\n\nRequired inputs:\n- Matter summary\n- Dates\n- Evidence list\n- Emails/notes\n- Notices/forms\n- Ledger/photos if relevant\n\nMy context:\n[PASTE NOTES / EMAILS / CALENDAR DETAILS / PROPERTY CONTEXT HERE]\n\nPlease produce:\n1. Chronological timeline\n2. Evidence checklist\n3. Missing evidence\n4. Risk questions\n5. Plain-English internal summary\n\nReview checklist:\n- Every date has a source\n- No legal conclusions invented\n- Gaps clearly marked\n- Documents verified\n\nImportant:\nDo not invent facts, dates, approvals, legislation, rent figures, trade advice, or decisions. Flag anything that needs human verification."
     },
     {
       "title": "Rent Review Helper",
-      "category": "Workflow",
-      "description": "Reusable Vanilla workflow. Open from Toolbox or pin to sidebar.",
-      "prompt": "Use this workflow for Rent Review Helper. Ask me for missing details first, then produce a practical output with a review checklist."
+      "category": "PM Workflow",
+      "description": "Trigger: lease renewal, rent increase recommendation, CMA discussion or owner/tenant rent explanation.",
+      "prompt": "You are assisting a Vanilla Rentals staff member.\n\nWorkflow: Rent Review Helper\n\nTrigger moment:\nA lease renewal or rent review needs clear analysis, communication and follow-up.\n\nUse when:\n- Lease renewal window\n- Rent review\n- Owner recommendation\n- Tenant explanation\n\nDo not use when:\n- Rent evidence not verified\n- Notice/compliance details not checked\n- Increase amount not approved\n\nRequired inputs:\n- Current rent\n- Proposed rent\n- Lease expiry\n- Property/suburb\n- Comparable evidence\n- Tenant history\n\nMy context:\n[PASTE NOTES / EMAILS / CALENDAR DETAILS / PROPERTY CONTEXT HERE]\n\nPlease produce:\n1. Rent review snapshot\n2. Owner recommendation email\n3. Tenant explanation draft\n4. Risk/sensitivity check\n5. Action checklist\n\nReview checklist:\n- Market evidence checked\n- Dates checked\n- No invented figures\n- Compliance confirmed separately\n\nImportant:\nDo not invent facts, dates, approvals, legislation, rent figures, trade advice, or decisions. Flag anything that needs human verification."
     },
     {
       "title": "Email Refiner",
-      "category": "Workflow",
-      "description": "Reusable Vanilla workflow. Open from Toolbox or pin to sidebar.",
-      "prompt": "Use this workflow for Email Refiner. Ask me for missing details first, then produce a practical output with a review checklist."
+      "category": "Communication Workflow",
+      "description": "Trigger: email sounds rough, emotional, long, unclear or risky before sending.",
+      "prompt": "You are assisting a Vanilla Rentals staff member.\n\nWorkflow: Email Refiner\n\nTrigger moment:\nI have drafted an email and need it clearer, safer, shorter or more professional.\n\nUse when:\n- Sensitive email\n- Difficult owner/tenant/trade reply\n- Message too long\n- Tone feels off\n\nDo not use when:\n- Facts are missing\n- Management approval is needed\n- Legal/compliance wording must be checked\n\nRequired inputs:\n- Draft email\n- Audience\n- Tone\n- Desired outcome\n\nMy context:\n[PASTE NOTES / EMAILS / CALENDAR DETAILS / PROPERTY CONTEXT HERE]\n\nPlease produce:\n1. Improved email\n2. Shorter version\n3. Tone check\n4. Risk check\n5. Subject line suggestions\n\nReview checklist:\n- Facts unchanged\n- No promises added\n- Tone suitable\n- Risky wording flagged\n\nImportant:\nDo not invent facts, dates, approvals, legislation, rent figures, trade advice, or decisions. Flag anything that needs human verification."
     },
     {
       "title": "SOP Builder",
-      "category": "Workflow",
-      "description": "Reusable Vanilla workflow. Open from Toolbox or pin to sidebar.",
-      "prompt": "Use this workflow for SOP Builder. Ask me for missing details first, then produce a practical output with a review checklist."
+      "category": "Admin Workflow",
+      "description": "Trigger: turning a repeated office process into training, checklist or documentation.",
+      "prompt": "You are assisting a Vanilla Rentals staff member.\n\nWorkflow: SOP Builder\n\nTrigger moment:\nA repeated process needs to become a clear SOP, checklist or training guide.\n\nUse when:\n- Documenting a process\n- Training new staff\n- Cleaning old instructions\n- Turning transcript into steps\n\nDo not use when:\n- Process owner has not verified the process\n- AI is being asked to invent policy\n- Steps are not known\n\nRequired inputs:\n- Process notes\n- Role responsible\n- Systems used\n- Exceptions\n- Escalation points\n\nMy context:\n[PASTE NOTES / EMAILS / CALENDAR DETAILS / PROPERTY CONTEXT HERE]\n\nPlease produce:\n1. SOP title/purpose\n2. Scope\n3. Responsibilities\n4. Step-by-step process\n5. Exceptions\n6. Common mistakes\n7. Quality checklist\n8. Questions to confirm\n\nReview checklist:\n- No policy invented\n- Unclear steps marked\n- Process owner review required\n- Systems named correctly\n\nImportant:\nDo not invent facts, dates, approvals, legislation, rent figures, trade advice, or decisions. Flag anything that needs human verification."
     },
     {
       "title": "Prompt Builder",
-      "category": "Workflow",
-      "description": "Reusable Vanilla workflow. Open from Toolbox or pin to sidebar.",
-      "prompt": "Use this workflow for Prompt Builder. Ask me for missing details first, then produce a practical output with a review checklist."
+      "category": "AI Workflow",
+      "description": "Trigger: repeated task needs a reusable prompt instead of a one-off vague request.",
+      "prompt": "You are assisting a Vanilla Rentals staff member.\n\nWorkflow: Prompt Builder\n\nTrigger moment:\nI have a task I repeat and want a better reusable AI prompt.\n\nUse when:\n- Repeated tasks\n- Quality matters\n- Specific output format needed\n- Staff keep asking AI vaguely\n\nDo not use when:\n- One-off quick question\n- Human decision-making is the main work\n- Facts are missing\n\nRequired inputs:\n- Task\n- Role using it\n- Audience/output\n- Facts usually needed\n- Tone\n- Constraints\n\nMy context:\n[PASTE NOTES / EMAILS / CALENDAR DETAILS / PROPERTY CONTEXT HERE]\n\nPlease produce:\n1. Final reusable prompt\n2. Required inputs\n3. Output format\n4. Safety rules\n5. Review checklist\n6. Short version\n\nReview checklist:\n- Placeholders clear\n- No facts invented\n- Human review included\n- Prompt is reusable\n\nImportant:\nDo not invent facts, dates, approvals, legislation, rent figures, trade advice, or decisions. Flag anything that needs human verification."
+    },
+    {
+      "title": "Lease Renewal Prep",
+      "category": "PM Workflow",
+      "description": "Trigger: lease expiry approaching and owner/tenant renewal actions need structure.",
+      "prompt": "You are assisting a Vanilla Rentals staff member.\n\nWorkflow: Lease Renewal Prep\n\nTrigger moment:\nA lease is approaching expiry and I need to organise owner recommendation, tenant communication and action dates.\n\nUse when:\n- Lease expiry approaching\n- Rent review needed\n- Owner decision needed\n- Tenant communication required\n\nDo not use when:\n- Lease dates/rent figures not verified\n- Notice requirements unchecked\n- Management approval required first\n\nRequired inputs:\n- Property\n- Tenant\n- Lease expiry\n- Current rent\n- Proposed rent\n- Tenant history\n- Owner instructions\n- Market evidence\n\nMy context:\n[PASTE NOTES / EMAILS / CALENDAR DETAILS / PROPERTY CONTEXT HERE]\n\nPlease produce:\n1. Renewal snapshot\n2. Owner recommendation email\n3. Tenant communication draft\n4. Action timeline\n5. Missing information checklist\n6. Risk notes\n\nReview checklist:\n- Dates verified\n- Rent facts verified\n- Notice/compliance checked\n- No unsupported claims\n\nImportant:\nDo not invent facts, dates, approvals, legislation, rent figures, trade advice, or decisions. Flag anything that needs human verification."
+    },
+    {
+      "title": "Difficult Conversation Prep",
+      "category": "Communication Workflow",
+      "description": "Trigger: before calling or replying to a frustrated owner, tenant, applicant or trade.",
+      "prompt": "You are assisting a Vanilla Rentals staff member.\n\nWorkflow: Difficult Conversation Prep\n\nTrigger moment:\nI need to speak with or reply to someone who may be upset, frustrated or resistant.\n\nUse when:\n- Before difficult calls\n- Before sensitive replies\n- When tone matters\n- When I need talking points\n\nDo not use when:\n- Manager escalation needed first\n- Legal/compliance issue unresolved\n- I am being asked to admit fault or make promises\n\nRequired inputs:\n- Situation\n- Person/audience\n- Desired outcome\n- Known facts\n- What cannot be promised\n\nMy context:\n[PASTE NOTES / EMAILS / CALENDAR DETAILS / PROPERTY CONTEXT HERE]\n\nPlease produce:\n1. Situation summary\n2. Conversation goal\n3. Talking points\n4. Likely objections and responses\n5. Phrases to avoid\n6. Follow-up message\n7. Escalation triggers\n\nReview checklist:\n- No admissions added\n- No promises added\n- Tone calm\n- Escalation triggers clear\n\nImportant:\nDo not invent facts, dates, approvals, legislation, rent figures, trade advice, or decisions. Flag anything that needs human verification."
+    },
+    {
+      "title": "Owner Update Pack",
+      "category": "PM Workflow",
+      "description": "Trigger: owner needs a concise update after maintenance, inspection, arrears, complaint or tenant issue.",
+      "prompt": "You are assisting a Vanilla Rentals staff member.\n\nWorkflow: Owner Update Pack\n\nTrigger moment:\nAn owner needs a clear update and I want to avoid vague or overly long communication.\n\nUse when:\n- After maintenance\n- After inspection\n- After arrears issue\n- After complaint\n- Before owner asks for update\n\nDo not use when:\n- Facts unchecked\n- Manager approval needed\n- Legal advice involved\n\nRequired inputs:\n- Issue summary\n- Property\n- Current status\n- Action taken\n- Decision needed\n- Next step\n\nMy context:\n[PASTE NOTES / EMAILS / CALENDAR DETAILS / PROPERTY CONTEXT HERE]\n\nPlease produce:\n1. Owner email under 220 words\n2. SMS version\n3. Internal PropertyMe note\n4. Follow-up task\n5. Risk review\n\nReview checklist:\n- Facts verified\n- Next step clear\n- No blame language\n- No unsupported claims\n\nImportant:\nDo not invent facts, dates, approvals, legislation, rent figures, trade advice, or decisions. Flag anything that needs human verification."
     }
   ]
 };
