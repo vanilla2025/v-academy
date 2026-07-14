@@ -1184,6 +1184,130 @@ window.ACADEMY_CATALOG = {
       ]
     },
     {
+      "id": "feature_connected_apps",
+      "title": "Connected Apps",
+      "icon": "🔗",
+      "summary": "Learn how to connect approved work apps to ChatGPT, check permissions, use the connection in a chat, and disconnect it safely.",
+      "why": "Connected apps let ChatGPT work with information already held in services such as Gmail, Calendar, Drive, Contacts, LinkedIn and GitHub. This can reduce copying and pasting, but access depends on the ChatGPT plan, workspace settings, administrator approval, region and the individual app. The connection should only be used for legitimate work purposes and with the minimum access required.",
+      "use": [
+        "Open ChatGPT Settings and locate Apps, or browse the Plugins/App directory if that is what your current interface shows.",
+        "Select the approved app, choose Connect, sign in to the correct work account and review every permission before approving it.",
+        "After connecting, start a new chat and invoke the app with an @ mention or through the + / Tools / More menu, depending on the current interface.",
+        "Test the connection with a low-risk request before relying on it for real work.",
+        "Disconnect an app from Settings when it is no longer needed or if the wrong account was connected."
+      ],
+      "avoid": [
+        "Do not connect personal accounts to the Vanilla workspace or connect Vanilla accounts to an unapproved personal workspace.",
+        "Do not assume every app is available. Availability can vary by plan, region, workspace role and administrator settings.",
+        "Do not approve permissions you do not understand. Stop and ask before granting broad read/write access.",
+        "Do not use a connected app to send, delete, modify or publish anything unless you have reviewed the action and have authority to do it.",
+        "Do not paste passwords, API keys, recovery codes or authentication tokens into ChatGPT.",
+        "Do not assume Xero or PropertyMe has a supported connection. Use them only if an approved integration is made available by Vanilla."
+      ],
+      "setup": [
+        {
+          "title": "1. Find the app",
+          "text": "Open ChatGPT Settings and look for Apps. Depending on the current ChatGPT interface, approved integrations may also be discovered through the Plugins directory or the Tools menu."
+        },
+        {
+          "title": "2. Check availability",
+          "text": "Confirm the app is enabled for your workspace and role. A message such as “Disabled by admin” means the workspace administrator must enable it."
+        },
+        {
+          "title": "3. Connect the correct account",
+          "text": "Choose Connect, sign in with the correct Vanilla work account and check the account name before approving access."
+        },
+        {
+          "title": "4. Review permissions",
+          "text": "Read what ChatGPT is asking to access. Prefer read/search access unless a work task genuinely requires an approved action."
+        },
+        {
+          "title": "5. Test it",
+          "text": "Use a harmless test request, confirm the retrieved information is correct, and review any output before using it."
+        },
+        {
+          "title": "6. Manage or disconnect",
+          "text": "Return to Settings > Apps to review the connection, reconnect if authorisation expires, or disconnect it when it is no longer required."
+        }
+      ],
+      "apps": [
+        {
+          "name": "Gmail",
+          "status": "Vanilla relevant",
+          "examples": "Find recent owner correspondence, summarise a thread, identify unanswered messages and prepare a reply."
+        },
+        {
+          "name": "Google Calendar",
+          "status": "Vanilla relevant",
+          "examples": "Review today’s appointments, prepare for meetings and identify realistic admin or follow-up blocks."
+        },
+        {
+          "name": "Google Drive",
+          "status": "Vanilla relevant",
+          "examples": "Locate approved documents, compare files and retrieve internal reference material."
+        },
+        {
+          "name": "Google Contacts",
+          "status": "Vanilla relevant",
+          "examples": "Find a saved contact or confirm contact details before communicating."
+        },
+        {
+          "name": "LinkedIn",
+          "status": "Use when available",
+          "examples": "Look up professional profiles and prepare for legitimate business conversations without guessing someone’s background."
+        },
+        {
+          "name": "GitHub",
+          "status": "Developer / project use",
+          "examples": "Review repositories, locate files and understand code changes for approved Vanilla projects."
+        },
+        {
+          "name": "Xero",
+          "status": "Check availability first",
+          "examples": "Only use if Vanilla approves a supported app or integration. Do not assume access exists."
+        },
+        {
+          "name": "PropertyMe",
+          "status": "No assumed direct connection",
+          "examples": "Use only if PropertyMe or Vanilla provides an approved integration. Do not treat V | Assist as a substitute for a native connection."
+        }
+      ],
+      "troubleshooting": [
+        "App not listed: check your plan, workspace role, region and whether the administrator has enabled it.",
+        "Wrong account connected: disconnect it immediately and reconnect using the correct Vanilla account.",
+        "Connection works but returns nothing: confirm the connected account itself has permission to access the requested data.",
+        "Authorisation expired: reconnect the app from Settings.",
+        "ChatGPT does not use the app automatically: invoke it with @, or select it from + / Tools / More.",
+        "Still uncertain: stop and ask Ivan or the workspace administrator before granting access."
+      ],
+      "prompts": [
+        {
+          "title": "Check my available connections",
+          "text": "Tell me which connected apps are available in this chat and what each one can do. Do not access any app yet."
+        },
+        {
+          "title": "Gmail connection test",
+          "text": "Using Gmail, find my most recent email from [NAME]. Tell me the subject and date only. Do not draft, send, archive or modify anything."
+        },
+        {
+          "title": "Calendar connection test",
+          "text": "Using Google Calendar, list my appointments for tomorrow in time order. Do not create, move, accept or cancel any events."
+        },
+        {
+          "title": "Drive connection test",
+          "text": "Using Google Drive, find documents with [KEYWORD] in the title. Return the file names and modified dates only. Do not edit or share anything."
+        },
+        {
+          "title": "LinkedIn profile lookup",
+          "text": "Using LinkedIn, look up [NAME / COMPANY]. Summarise only the professional information shown in the connected profile and clearly state if the match is uncertain."
+        },
+        {
+          "title": "GitHub repository orientation",
+          "text": "Using GitHub, locate the repository called [REPOSITORY]. Summarise its purpose, main folders and most recent visible changes. Do not modify any files."
+        }
+      ]
+    },
+    {
       "id": "feature_projects",
       "title": "Projects",
       "icon": "📁",
@@ -1352,73 +1476,73 @@ window.ACADEMY_CATALOG = {
       "title": "Daily Startup",
       "category": "Workflow",
       "description": "Reusable Vanilla workflow. Open from Toolbox or pin to sidebar.",
-      "prompt": "IMPORTANT WORKFLOW RULE:\nDo not rewrite, improve, analyse, critique, summarise, or redesign this workflow prompt.\nUse this prompt as operating instructions.\n\nFirst, check whether the user has provided the required inputs listed below.\n\nIf any required input is missing, stop and ask only for the missing information.\nDo not produce the final output until the required information is provided.\nDo not produce a better prompt unless the workflow is specifically \"Prompt Builder\".\n\nUse this workflow for Daily Startup. Ask me for missing details first, then produce a practical output with a review checklist."
+      "prompt": "Use this workflow for Daily Startup. Ask me for missing details first, then produce a practical output with a review checklist."
     },
     {
       "title": "Owner Follow-up",
       "category": "Workflow",
       "description": "Reusable Vanilla workflow. Open from Toolbox or pin to sidebar.",
-      "prompt": "IMPORTANT WORKFLOW RULE:\nDo not rewrite, improve, analyse, critique, summarise, or redesign this workflow prompt.\nUse this prompt as operating instructions.\n\nFirst, check whether the user has provided the required inputs listed below.\n\nIf any required input is missing, stop and ask only for the missing information.\nDo not produce the final output until the required information is provided.\nDo not produce a better prompt unless the workflow is specifically \"Prompt Builder\".\n\nUse this workflow for Owner Follow-up. Ask me for missing details first, then produce a practical output with a review checklist."
+      "prompt": "Use this workflow for Owner Follow-up. Ask me for missing details first, then produce a practical output with a review checklist."
     },
     {
       "title": "Calendar Planner",
       "category": "Workflow",
       "description": "Reusable Vanilla workflow. Open from Toolbox or pin to sidebar.",
-      "prompt": "IMPORTANT WORKFLOW RULE:\nDo not rewrite, improve, analyse, critique, summarise, or redesign this workflow prompt.\nUse this prompt as operating instructions.\n\nFirst, check whether the user has provided the required inputs listed below.\n\nIf any required input is missing, stop and ask only for the missing information.\nDo not produce the final output until the required information is provided.\nDo not produce a better prompt unless the workflow is specifically \"Prompt Builder\".\n\nUse this workflow for Calendar Planner. Ask me for missing details first, then produce a practical output with a review checklist."
+      "prompt": "Use this workflow for Calendar Planner. Ask me for missing details first, then produce a practical output with a review checklist."
     },
     {
       "title": "Gmail Follow-up Finder",
       "category": "Workflow",
       "description": "Reusable Vanilla workflow. Open from Toolbox or pin to sidebar.",
-      "prompt": "IMPORTANT WORKFLOW RULE:\nDo not rewrite, improve, analyse, critique, summarise, or redesign this workflow prompt.\nUse this prompt as operating instructions.\n\nFirst, check whether the user has provided the required inputs listed below.\n\nIf any required input is missing, stop and ask only for the missing information.\nDo not produce the final output until the required information is provided.\nDo not produce a better prompt unless the workflow is specifically \"Prompt Builder\".\n\nUse this workflow for Gmail Follow-up Finder. Ask me for missing details first, then produce a practical output with a review checklist."
+      "prompt": "Use this workflow for Gmail Follow-up Finder. Ask me for missing details first, then produce a practical output with a review checklist."
     },
     {
       "title": "Meeting Notes Cleaner",
       "category": "Workflow",
       "description": "Reusable Vanilla workflow. Open from Toolbox or pin to sidebar.",
-      "prompt": "IMPORTANT WORKFLOW RULE:\nDo not rewrite, improve, analyse, critique, summarise, or redesign this workflow prompt.\nUse this prompt as operating instructions.\n\nFirst, check whether the user has provided the required inputs listed below.\n\nIf any required input is missing, stop and ask only for the missing information.\nDo not produce the final output until the required information is provided.\nDo not produce a better prompt unless the workflow is specifically \"Prompt Builder\".\n\nUse this workflow for Meeting Notes Cleaner. Ask me for missing details first, then produce a practical output with a review checklist."
+      "prompt": "Use this workflow for Meeting Notes Cleaner. Ask me for missing details first, then produce a practical output with a review checklist."
     },
     {
       "title": "Maintenance Summary",
       "category": "Workflow",
       "description": "Reusable Vanilla workflow. Open from Toolbox or pin to sidebar.",
-      "prompt": "IMPORTANT WORKFLOW RULE:\nDo not rewrite, improve, analyse, critique, summarise, or redesign this workflow prompt.\nUse this prompt as operating instructions.\n\nFirst, check whether the user has provided the required inputs listed below.\n\nIf any required input is missing, stop and ask only for the missing information.\nDo not produce the final output until the required information is provided.\nDo not produce a better prompt unless the workflow is specifically \"Prompt Builder\".\n\nUse this workflow for Maintenance Summary. Ask me for missing details first, then produce a practical output with a review checklist."
+      "prompt": "Use this workflow for Maintenance Summary. Ask me for missing details first, then produce a practical output with a review checklist."
     },
     {
       "title": "Inspection Comments",
       "category": "Workflow",
       "description": "Reusable Vanilla workflow. Open from Toolbox or pin to sidebar.",
-      "prompt": "IMPORTANT WORKFLOW RULE:\nDo not rewrite, improve, analyse, critique, summarise, or redesign this workflow prompt.\nUse this prompt as operating instructions.\n\nFirst, check whether the user has provided the required inputs listed below.\n\nIf any required input is missing, stop and ask only for the missing information.\nDo not produce the final output until the required information is provided.\nDo not produce a better prompt unless the workflow is specifically \"Prompt Builder\".\n\nUse this workflow for Inspection Comments. Ask me for missing details first, then produce a practical output with a review checklist."
+      "prompt": "Use this workflow for Inspection Comments. Ask me for missing details first, then produce a practical output with a review checklist."
     },
     {
       "title": "QCAT Timeline",
       "category": "Workflow",
       "description": "Reusable Vanilla workflow. Open from Toolbox or pin to sidebar.",
-      "prompt": "IMPORTANT WORKFLOW RULE:\nDo not rewrite, improve, analyse, critique, summarise, or redesign this workflow prompt.\nUse this prompt as operating instructions.\n\nFirst, check whether the user has provided the required inputs listed below.\n\nIf any required input is missing, stop and ask only for the missing information.\nDo not produce the final output until the required information is provided.\nDo not produce a better prompt unless the workflow is specifically \"Prompt Builder\".\n\nUse this workflow for QCAT Timeline. Ask me for missing details first, then produce a practical output with a review checklist."
+      "prompt": "Use this workflow for QCAT Timeline. Ask me for missing details first, then produce a practical output with a review checklist."
     },
     {
       "title": "Rent Review Helper",
       "category": "Workflow",
       "description": "Reusable Vanilla workflow. Open from Toolbox or pin to sidebar.",
-      "prompt": "IMPORTANT WORKFLOW RULE:\nDo not rewrite, improve, analyse, critique, summarise, or redesign this workflow prompt.\nUse this prompt as operating instructions.\n\nFirst, check whether the user has provided the required inputs listed below.\n\nIf any required input is missing, stop and ask only for the missing information.\nDo not produce the final output until the required information is provided.\nDo not produce a better prompt unless the workflow is specifically \"Prompt Builder\".\n\nUse this workflow for Rent Review Helper. Ask me for missing details first, then produce a practical output with a review checklist."
+      "prompt": "Use this workflow for Rent Review Helper. Ask me for missing details first, then produce a practical output with a review checklist."
     },
     {
       "title": "Email Refiner",
       "category": "Workflow",
       "description": "Reusable Vanilla workflow. Open from Toolbox or pin to sidebar.",
-      "prompt": "IMPORTANT WORKFLOW RULE:\nDo not rewrite, improve, analyse, critique, summarise, or redesign this workflow prompt.\nUse this prompt as operating instructions.\n\nFirst, check whether the user has provided the required inputs listed below.\n\nIf any required input is missing, stop and ask only for the missing information.\nDo not produce the final output until the required information is provided.\nDo not produce a better prompt unless the workflow is specifically \"Prompt Builder\".\n\nUse this workflow for Email Refiner. Ask me for missing details first, then produce a practical output with a review checklist."
+      "prompt": "Use this workflow for Email Refiner. Ask me for missing details first, then produce a practical output with a review checklist."
     },
     {
       "title": "SOP Builder",
       "category": "Workflow",
       "description": "Reusable Vanilla workflow. Open from Toolbox or pin to sidebar.",
-      "prompt": "IMPORTANT WORKFLOW RULE:\nDo not rewrite, improve, analyse, critique, summarise, or redesign this workflow prompt.\nUse this prompt as operating instructions.\n\nFirst, check whether the user has provided the required inputs listed below.\n\nIf any required input is missing, stop and ask only for the missing information.\nDo not produce the final output until the required information is provided.\nDo not produce a better prompt unless the workflow is specifically \"Prompt Builder\".\n\nUse this workflow for SOP Builder. Ask me for missing details first, then produce a practical output with a review checklist."
+      "prompt": "Use this workflow for SOP Builder. Ask me for missing details first, then produce a practical output with a review checklist."
     },
     {
       "title": "Prompt Builder",
       "category": "Workflow",
       "description": "Reusable Vanilla workflow. Open from Toolbox or pin to sidebar.",
-      "prompt": "IMPORTANT WORKFLOW RULE:\nDo not rewrite, improve, analyse, critique, summarise, or redesign this workflow prompt.\nUse this prompt as operating instructions.\n\nFirst, check whether the user has provided the required inputs listed below.\n\nIf any required input is missing, stop and ask only for the missing information.\nDo not produce the final output until the required information is provided.\nFor this Prompt Builder workflow only, your job is to create a better reusable prompt. However, still ask for missing required information first before creating it.\n\nUse this workflow for Prompt Builder. Ask me for missing details first, then produce a practical output with a review checklist."
+      "prompt": "Use this workflow for Prompt Builder. Ask me for missing details first, then produce a practical output with a review checklist."
     }
   ]
 };
