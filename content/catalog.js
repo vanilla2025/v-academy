@@ -1185,49 +1185,50 @@ window.ACADEMY_CATALOG = {
     },
     {
       "id": "feature_connected_apps",
-      "title": "Connected Apps",
+      "title": "Plugins & Connected Apps",
       "icon": "🔗",
-      "summary": "Learn how to connect approved work apps to ChatGPT, check permissions, use the connection in a chat, and disconnect it safely.",
-      "why": "Connected apps let ChatGPT work with information already held in services such as Gmail, Calendar, Drive, Contacts, LinkedIn and GitHub. This can reduce copying and pasting, but access depends on the ChatGPT plan, workspace settings, administrator approval, region and the individual app. The connection should only be used for legitimate work purposes and with the minimum access required.",
+      "summary": "Learn how to find an approved Plugin, connect the correct work account, check permissions, use it safely and disconnect it when required.",
+      "why": "In the current VORSI ChatGPT workspace, external service connections are managed under Plugins. A Plugin can let ChatGPT work with authorised information from services such as Gmail, Calendar, Drive, Contacts, LinkedIn and GitHub. This can reduce copying and pasting, but access depends on workspace approval and the permissions granted to the individual Plugin.",
       "use": [
-        "Open ChatGPT Settings and locate Apps, or browse the Plugins/App directory if that is what your current interface shows.",
-        "Select the approved app, choose Connect, sign in to the correct work account and review every permission before approving it.",
-        "After connecting, start a new chat and invoke the app with an @ mention or through the + / Tools / More menu, depending on the current interface.",
-        "Test the connection with a low-risk request before relying on it for real work.",
-        "Disconnect an app from Settings when it is no longer needed or if the wrong account was connected."
+        "Open ChatGPT Settings and select Plugins. This is the location staff should look for in the current VORSI workspace.",
+        "Choose an approved Plugin, select Connect, sign in to the correct Vanilla work account and review every requested permission before approving it.",
+        "After connecting, start a normal chat. Select or invoke the Plugin when the task requires information from that service.",
+        "Test the Plugin with a low-risk, read-only request before relying on it for real work.",
+        "Return to Settings > Plugins to review or disconnect a connection when it is no longer needed or the wrong account was connected."
       ],
       "avoid": [
+        "Do not look for an Apps section in Settings in the current VORSI workspace; use Plugins.",
         "Do not connect personal accounts to the Vanilla workspace or connect Vanilla accounts to an unapproved personal workspace.",
-        "Do not assume every app is available. Availability can vary by plan, region, workspace role and administrator settings.",
+        "Do not assume every Plugin is available. Availability depends on workspace approval, role and the individual service.",
         "Do not approve permissions you do not understand. Stop and ask before granting broad read/write access.",
-        "Do not use a connected app to send, delete, modify or publish anything unless you have reviewed the action and have authority to do it.",
+        "Do not use a Plugin to send, delete, modify or publish anything unless you have reviewed the action and have authority to do it.",
         "Do not paste passwords, API keys, recovery codes or authentication tokens into ChatGPT.",
-        "Do not assume Xero or PropertyMe has a supported connection. Use them only if an approved integration is made available by Vanilla."
+        "Do not assume Xero or PropertyMe has a supported Plugin. Use them only if an approved integration is made available by Vanilla."
       ],
       "setup": [
         {
-          "title": "1. Find the app",
-          "text": "Open ChatGPT Settings and look for Apps. Depending on the current ChatGPT interface, approved integrations may also be discovered through the Plugins directory or the Tools menu."
+          "title": "1. Open Plugins",
+          "text": "In ChatGPT, open Settings and select Plugins from the left-hand menu. Do not look for Apps; the current VORSI workspace calls this section Plugins."
         },
         {
-          "title": "2. Check availability",
-          "text": "Confirm the app is enabled for your workspace and role. A message such as “Disabled by admin” means the workspace administrator must enable it."
+          "title": "2. Find the approved Plugin",
+          "text": "Browse or search the Plugins directory for the service you need, such as Gmail, Google Calendar, Google Drive or LinkedIn. If it is not listed, stop and ask rather than attempting a workaround."
         },
         {
           "title": "3. Connect the correct account",
-          "text": "Choose Connect, sign in with the correct Vanilla work account and check the account name before approving access."
+          "text": "Select the Plugin, choose Connect, sign in with the correct Vanilla work account and confirm the account name before approving access."
         },
         {
           "title": "4. Review permissions",
-          "text": "Read what ChatGPT is asking to access. Prefer read/search access unless a work task genuinely requires an approved action."
+          "text": "Read exactly what the Plugin is asking to access. Prefer read/search access unless an approved work task genuinely requires a write action."
         },
         {
-          "title": "5. Test it",
-          "text": "Use a harmless test request, confirm the retrieved information is correct, and review any output before using it."
+          "title": "5. Test it safely",
+          "text": "Open a new chat and use a harmless, read-only test request. Confirm the returned information belongs to the correct account before using the Plugin for real work."
         },
         {
           "title": "6. Manage or disconnect",
-          "text": "Return to Settings > Apps to review the connection, reconnect if authorisation expires, or disconnect it when it is no longer required."
+          "text": "Return to Settings > Plugins to review the connection, reconnect if authorisation expires, or disconnect it when it is no longer required."
         }
       ],
       "apps": [
@@ -1273,17 +1274,17 @@ window.ACADEMY_CATALOG = {
         }
       ],
       "troubleshooting": [
-        "App not listed: check your plan, workspace role, region and whether the administrator has enabled it.",
-        "Wrong account connected: disconnect it immediately and reconnect using the correct Vanilla account.",
+        "Plugin not listed: confirm it has been approved and enabled for the VORSI workspace. If it is missing, ask Ivan or the workspace administrator.",
+        "Wrong account connected: go to Settings > Plugins, disconnect it immediately and reconnect using the correct Vanilla account.",
         "Connection works but returns nothing: confirm the connected account itself has permission to access the requested data.",
-        "Authorisation expired: reconnect the app from Settings.",
-        "ChatGPT does not use the app automatically: invoke it with @, or select it from + / Tools / More.",
+        "Authorisation expired: reconnect the Plugin from Settings > Plugins.",
+        "ChatGPT does not use the Plugin automatically: explicitly select or invoke the Plugin in the chat before repeating the request.",
         "Still uncertain: stop and ask Ivan or the workspace administrator before granting access."
       ],
       "prompts": [
         {
-          "title": "Check my available connections",
-          "text": "Tell me which connected apps are available in this chat and what each one can do. Do not access any app yet."
+          "title": "Check my available Plugins",
+          "text": "Tell me which Plugins are available in this chat and what each one can do. Do not access any Plugin yet."
         },
         {
           "title": "Gmail connection test",
