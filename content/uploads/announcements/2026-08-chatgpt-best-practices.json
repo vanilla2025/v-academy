@@ -6,6 +6,9 @@
   "published": "03/08/2026",
   "priority": 100,
   "status": "published",
-  "link": "guides/chatgpt-best-practices/",
+  "destination": {
+    "type": "guide",
+    "id": "chatgpt-best-practices"
+  },
   "linkText": "Open guide"
 }

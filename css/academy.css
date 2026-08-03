@@ -8,3 +8,4 @@
 .announcementCard p{margin:0;color:var(--muted,#667085)}
 .announcementMeta{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
 @media(max-width:720px){.announcementCard{align-items:flex-start;flex-direction:column}}
+.guideMain{padding:0;overflow:hidden;background:#f8f3e9}.guideToolbar{display:flex;align-items:center;gap:14px;justify-content:space-between;padding:12px 18px;background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:3}.guideToolbar>div{display:flex;flex-direction:column;min-width:0}.guideToolbar .small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.guideFrame{display:block;width:100%;height:calc(100vh - 67px);border:0;background:#f8f3e9}@media(max-width:850px){.guideToolbar{position:relative;flex-wrap:wrap}.guideFrame{height:80vh}}
