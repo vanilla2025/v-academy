@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 3.2.2 - Integrated guide polish (3 Aug 2026)
+
+- Fixed local and deployed guide paths to target the actual index.html file.
+- Added an embedded guide mode so the Academy sidebar remains visible.
+- Removed duplicate Vanilla branding from the embedded guide view.
+- Reduced the guide hero heading and spacing inside the Academy.
+
+
 ## 3.1 - Workflow OS (1 Jul 2026)
 
 -   Workflow-first redesign.

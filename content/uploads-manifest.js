@@ -1,5 +1,5 @@
 window.ACADEMY_UPLOADS = {
-  "generatedAt": "2026-08-03T03:53:24.828Z",
+  "generatedAt": "2026-08-03T04:06:38.597Z",
   "announcements": [
     {
       "id": "chatgpt-best-practices-2026-08",
