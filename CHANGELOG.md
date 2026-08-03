@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 3.5.2 - Required bulletin startup flow (3 Aug 2026)
+
+- Required unread bulletins now open as a dedicated first screen.
+- The dashboard is no longer rendered underneath a required bulletin.
+- Acknowledging a required bulletin returns the learner to the dashboard.
+- The Bulletin Board remains the permanent record for all published notices.
+- Fixed the initial layout collapse caused by stacking required reading and dashboard content.
+
 ## 3.5.1 - Bulletin Board and navigation cleanup (3 Aug 2026)
 
 - Renamed Updates to Bulletin Board.
