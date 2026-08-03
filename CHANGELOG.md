@@ -1,5 +1,29 @@
 # CHANGELOG
 
+## 3.5.1 - Bulletin Board and navigation cleanup (3 Aug 2026)
+
+- Renamed Updates to Bulletin Board.
+- Kept every published notice permanently discoverable on the Bulletin Board, regardless of whether it was opened from the dashboard.
+- Kept required reading at the top of the dashboard until acknowledgement.
+- Removed Administration from the main navigation.
+- Moved maintenance controls into a PIN-secured section inside Settings.
+- Updated all visible version-control text to V3.5.1.
+
+## 3.3.1 - Navigation polish (3 Aug 2026)
+
+- Made the sidebar profile card clickable and linked it to Profile & Access settings.
+- Renamed Learning Paths to Training.
+- Updated the dashboard version-control panel to V3.3.1.
+- Preserved the unified Tools & Workflows library and embedded ChatGPT guide.
+
+## 3.3.0 - Unified Tools & Workflows (3 Aug 2026)
+
+- Combined AI Features and Toolbox into one Tools & Workflows library.
+- Added workflow detail pages before any prompt can be copied.
+- Replaced placeholder workflow descriptions and prompts with practical Vanilla workflows.
+- Fixed pinned items so they open the correct capability or workflow.
+- Preserved progress tracking and Apps Script reporting.
+
 ## 3.2.2 - Integrated guide polish (3 Aug 2026)
 
 - Fixed local and deployed guide paths to target the actual index.html file.

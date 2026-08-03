@@ -1474,76 +1474,280 @@ window.ACADEMY_CATALOG = {
   ],
   "tools": [
     {
-      "title": "Daily Startup",
-      "category": "Workflow",
-      "description": "Reusable Vanilla workflow. Open from Toolbox or pin to sidebar.",
-      "prompt": "Use this workflow for Daily Startup. Ask me for missing details first, then produce a practical output with a review checklist."
+        "id": "daily-startup",
+        "icon": "🌅",
+        "title": "Daily Startup",
+        "category": "Workflow",
+        "summary": "Turn today’s calendar, inbox and outstanding follow-ups into a clear priority plan.",
+        "when": [
+            "At the start of the workday",
+            "When priorities are competing",
+            "After time away from the office"
+        ],
+        "needs": [
+            "Today’s appointments",
+            "Important unread or unanswered messages",
+            "Outstanding tasks and deadlines"
+        ],
+        "steps": [
+            "Paste or summarise the relevant calendar, email and task information.",
+            "ChatGPT identifies urgent, important and deferrable work.",
+            "Review the proposed order and adjust for business priorities."
+        ],
+        "prompt": "Help me plan my workday.\n\nMy role: [ROLE]\nToday’s appointments: [PASTE OR SUMMARISE]\nImportant unread or unanswered messages: [PASTE OR SUMMARISE]\nOutstanding tasks and deadlines: [LIST]\nKnown constraints: [MEETINGS, TRAVEL, STAFF AVAILABILITY]\n\nCreate:\n1. My top three priorities.\n2. A practical schedule for the day.\n3. Messages or follow-ups I should send first.\n4. Items that can safely wait.\n5. A short end-of-day checklist.\n\nDo not invent missing facts. Ask questions where the priority cannot be determined."
     },
     {
-      "title": "Owner Follow-up",
-      "category": "Workflow",
-      "description": "Reusable Vanilla workflow. Open from Toolbox or pin to sidebar.",
-      "prompt": "Use this workflow for Owner Follow-up. Ask me for missing details first, then produce a practical output with a review checklist."
+        "id": "owner-follow-up",
+        "icon": "🏠",
+        "title": "Owner Follow-up",
+        "category": "Workflow",
+        "summary": "Draft a clear owner follow-up after a call, inspection, maintenance issue or decision.",
+        "when": [
+            "After speaking with an owner",
+            "When confirming agreed actions",
+            "When an owner has not responded"
+        ],
+        "needs": [
+            "Owner name and property",
+            "What happened or was discussed",
+            "Required decision, action and deadline"
+        ],
+        "steps": [
+            "Provide the facts and desired outcome.",
+            "Choose the appropriate tone.",
+            "Review dates, commitments and compliance wording before sending."
+        ],
+        "prompt": "Draft an owner follow-up email.\n\nOwner: [NAME]\nProperty: [ADDRESS]\nContext: [WHAT HAPPENED OR WAS DISCUSSED]\nActions already completed: [LIST]\nDecision or action required from the owner: [DETAILS]\nDeadline: [DATE/TIME]\nTone: professional, clear and calm.\n\nUse a soft heading structure. Lead with the purpose, separate completed actions from required actions, and finish with one clear next step. Do not invent facts or legal requirements."
     },
     {
-      "title": "Calendar Planner",
-      "category": "Workflow",
-      "description": "Reusable Vanilla workflow. Open from Toolbox or pin to sidebar.",
-      "prompt": "Use this workflow for Calendar Planner. Ask me for missing details first, then produce a practical output with a review checklist."
+        "id": "calendar-planner",
+        "icon": "🗓️",
+        "title": "Calendar Planner",
+        "category": "Workflow",
+        "summary": "Build a realistic schedule around appointments, travel time, deadlines and focused work.",
+        "when": [
+            "Planning a busy day or week",
+            "Coordinating inspections or meetings",
+            "Protecting time for project work"
+        ],
+        "needs": [
+            "Fixed appointments",
+            "Task durations and deadlines",
+            "Travel or availability constraints"
+        ],
+        "steps": [
+            "List fixed commitments first.",
+            "Add flexible tasks and estimated durations.",
+            "Review the proposed schedule for unrealistic transitions."
+        ],
+        "prompt": "Create a realistic calendar plan.\n\nPlanning period: [DATE OR WEEK]\nFixed appointments: [LIST WITH TIMES AND LOCATIONS]\nFlexible tasks: [TASK + ESTIMATED DURATION + DEADLINE]\nTravel requirements: [DETAILS]\nWorking hours and breaks: [DETAILS]\nPriorities: [LIST]\n\nProduce a chronological schedule with buffer time, travel time and a short contingency block. Flag clashes or anything that cannot realistically fit."
     },
     {
-      "title": "Gmail Follow-up Finder",
-      "category": "Workflow",
-      "description": "Reusable Vanilla workflow. Open from Toolbox or pin to sidebar.",
-      "prompt": "Use this workflow for Gmail Follow-up Finder. Ask me for missing details first, then produce a practical output with a review checklist."
+        "id": "gmail-follow-up-finder",
+        "icon": "📨",
+        "title": "Gmail Follow-up Finder",
+        "category": "Workflow",
+        "summary": "Identify conversations that need a reply, chase-up or recorded next action.",
+        "when": [
+            "Clearing the inbox",
+            "Preparing for leave",
+            "Checking whether commitments were completed"
+        ],
+        "needs": [
+            "Relevant email thread summaries or Gmail access",
+            "The review period",
+            "Any priority people or properties"
+        ],
+        "steps": [
+            "Define the period and priorities.",
+            "Review threads for unanswered questions or promised actions.",
+            "Confirm each proposed follow-up before sending."
+        ],
+        "prompt": "Review the following email threads and identify follow-ups.\n\nReview period: [DATES]\nPriority people/properties: [LIST]\nThreads or summaries: [PASTE]\n\nReturn a table with: person, subject/property, last meaningful action, what is still outstanding, recommended next step, urgency and suggested follow-up wording. Separate genuine follow-ups from threads that require no action. Do not assume a task was completed unless the thread confirms it."
     },
     {
-      "title": "Meeting Notes Cleaner",
-      "category": "Workflow",
-      "description": "Reusable Vanilla workflow. Open from Toolbox or pin to sidebar.",
-      "prompt": "Use this workflow for Meeting Notes Cleaner. Ask me for missing details first, then produce a practical output with a review checklist."
+        "id": "meeting-notes-cleaner",
+        "icon": "📝",
+        "title": "Meeting Notes Cleaner",
+        "category": "Workflow",
+        "summary": "Turn rough meeting notes into decisions, actions, owners and deadlines.",
+        "when": [
+            "After meetings or catch-ups",
+            "After whiteboard discussions",
+            "When notes are fragmented"
+        ],
+        "needs": [
+            "Raw notes or transcript",
+            "Attendee names and roles",
+            "Known deadlines"
+        ],
+        "steps": [
+            "Paste the raw notes without over-editing.",
+            "ChatGPT separates facts, decisions and actions.",
+            "Verify owners and dates before circulation."
+        ],
+        "prompt": "Clean and structure these meeting notes.\n\nMeeting: [TITLE]\nDate: [DATE]\nAttendees: [NAMES]\nRaw notes: [PASTE]\n\nProduce:\n- Purpose and key context\n- Decisions made\n- Action register with owner and deadline\n- Open questions\n- Risks or dependencies\n- A concise follow-up email\n\nDo not convert suggestions into decisions. Mark any unclear owner or deadline as ‘To confirm’."
     },
     {
-      "title": "Maintenance Summary",
-      "category": "Workflow",
-      "description": "Reusable Vanilla workflow. Open from Toolbox or pin to sidebar.",
-      "prompt": "Use this workflow for Maintenance Summary. Ask me for missing details first, then produce a practical output with a review checklist."
+        "id": "maintenance-summary",
+        "icon": "🔧",
+        "title": "Maintenance Summary",
+        "category": "Workflow",
+        "summary": "Summarise a maintenance matter for the owner, tenant or internal handover.",
+        "when": [
+            "After receiving multiple updates",
+            "Before requesting an owner decision",
+            "When handing a matter to another staff member"
+        ],
+        "needs": [
+            "Property and issue",
+            "Chronological updates",
+            "Quotes, costs and current status"
+        ],
+        "steps": [
+            "Provide updates in date order where possible.",
+            "Select the intended audience.",
+            "Check that costs and approvals match the evidence."
+        ],
+        "prompt": "Prepare a maintenance summary.\n\nAudience: [OWNER / TENANT / INTERNAL]\nProperty: [ADDRESS]\nIssue: [DESCRIPTION]\nTimeline and communications: [PASTE]\nQuotes or costs: [DETAILS]\nCurrent status: [DETAILS]\nDecision or next action required: [DETAILS]\n\nWrite a concise factual summary with soft headings: Issue, Actions Taken, Current Position, Costs/Quotes, Decision or Next Step. Keep legal or technical claims limited to the supplied evidence."
     },
     {
-      "title": "Inspection Comments",
-      "category": "Workflow",
-      "description": "Reusable Vanilla workflow. Open from Toolbox or pin to sidebar.",
-      "prompt": "Use this workflow for Inspection Comments. Ask me for missing details first, then produce a practical output with a review checklist."
+        "id": "inspection-comments",
+        "icon": "📷",
+        "title": "Inspection Comments",
+        "category": "Workflow",
+        "summary": "Convert inspection observations into consistent, neutral and useful property comments.",
+        "when": [
+            "Drafting routine, entry or exit comments",
+            "Standardising wording across rooms",
+            "Removing emotional or unclear language"
+        ],
+        "needs": [
+            "Inspection type",
+            "Room or area",
+            "Observed condition and photo references"
+        ],
+        "steps": [
+            "Provide observations only.",
+            "Specify the inspection type and preferred style.",
+            "Verify that the final wording matches the photographs."
+        ],
+        "prompt": "Rewrite these inspection observations into clear, neutral property comments.\n\nInspection type: [ENTRY / ROUTINE / EXIT]\nRoom or area: [AREA]\nObserved condition: [PASTE]\nPhoto references: [IDS IF AVAILABLE]\nRequired action, if any: [DETAILS]\n\nUse concise factual wording. Do not infer causes, responsibility, age or damage beyond the evidence. Keep each observation separate and preserve photo references."
     },
     {
-      "title": "QCAT Timeline",
-      "category": "Workflow",
-      "description": "Reusable Vanilla workflow. Open from Toolbox or pin to sidebar.",
-      "prompt": "Use this workflow for QCAT Timeline. Ask me for missing details first, then produce a practical output with a review checklist."
+        "id": "qcat-timeline",
+        "icon": "⚖️",
+        "title": "QCAT Timeline",
+        "category": "Workflow",
+        "summary": "Organise case evidence into a chronological, tribunal-ready timeline without inventing facts.",
+        "when": [
+            "Preparing for QCAT or conciliation",
+            "Reviewing a dispute history",
+            "Checking gaps in evidence"
+        ],
+        "needs": [
+            "Dated emails, notices, notes and documents",
+            "Parties and property details",
+            "Known claim or issue"
+        ],
+        "steps": [
+            "Provide evidence with dates and sources.",
+            "ChatGPT orders events and identifies gaps.",
+            "Verify every event against the source documents."
+        ],
+        "prompt": "Create an evidence-based case timeline.\n\nMatter: [CASE OR ISSUE]\nProperty: [ADDRESS]\nParties: [NAMES/ROLES]\nEvidence and dated events: [PASTE]\n\nReturn a chronological table with date, event, source/evidence, significance and any gap or inconsistency. Then provide a neutral case summary, unresolved issues and a list of documents still needed. Do not provide legal conclusions or invent dates, service, conversations or outcomes."
     },
     {
-      "title": "Rent Review Helper",
-      "category": "Workflow",
-      "description": "Reusable Vanilla workflow. Open from Toolbox or pin to sidebar.",
-      "prompt": "Use this workflow for Rent Review Helper. Ask me for missing details first, then produce a practical output with a review checklist."
+        "id": "rent-review-helper",
+        "icon": "📊",
+        "title": "Rent Review Helper",
+        "category": "Workflow",
+        "summary": "Structure rent-review evidence and turn it into a clear recommendation for review.",
+        "when": [
+            "Preparing a rent review",
+            "Comparing market evidence",
+            "Drafting an owner recommendation"
+        ],
+        "needs": [
+            "Current rent and lease dates",
+            "Comparable properties and dates",
+            "Property differences and constraints"
+        ],
+        "steps": [
+            "Provide current tenancy facts and comparable evidence.",
+            "Separate evidence from judgement.",
+            "Review the recommendation against current legislation and company process."
+        ],
+        "prompt": "Help structure a rent review recommendation.\n\nProperty: [ADDRESS]\nCurrent weekly rent: [AMOUNT]\nLease and last increase dates: [DATES]\nProperty features/condition: [DETAILS]\nComparable evidence: [PASTE]\nKnown constraints or risks: [DETAILS]\n\nSummarise the evidence, note material differences between comparables, provide a cautious recommended range and draft an owner briefing. Clearly label assumptions and do not state that a rent increase is legally available unless the supplied dates and current rules have been verified."
     },
     {
-      "title": "Email Refiner",
-      "category": "Workflow",
-      "description": "Reusable Vanilla workflow. Open from Toolbox or pin to sidebar.",
-      "prompt": "Use this workflow for Email Refiner. Ask me for missing details first, then produce a practical output with a review checklist."
+        "id": "email-refiner",
+        "icon": "✉️",
+        "title": "Email Refiner",
+        "category": "Workflow",
+        "summary": "Improve an existing email while preserving the facts, intent and appropriate tone.",
+        "when": [
+            "An email is too long or unclear",
+            "The tone needs adjustment",
+            "You need a stronger call to action"
+        ],
+        "needs": [
+            "The original draft",
+            "Recipient and purpose",
+            "Any wording that must remain"
+        ],
+        "steps": [
+            "Paste the full draft.",
+            "Specify the recipient, purpose and tone.",
+            "Check that no commitments or facts were changed."
+        ],
+        "prompt": "Refine this email without changing the facts.\n\nRecipient: [WHO]\nPurpose: [OUTCOME]\nPreferred tone: [NEUTRAL / WARM / FIRM / CONCISE]\nMust retain: [DETAILS]\nDraft: [PASTE]\n\nUse soft headings only where they improve scanning. Remove repetition, make the requested action explicit and preserve all dates, amounts and commitments. Flag any unclear or potentially risky wording separately."
     },
     {
-      "title": "SOP Builder",
-      "category": "Workflow",
-      "description": "Reusable Vanilla workflow. Open from Toolbox or pin to sidebar.",
-      "prompt": "Use this workflow for SOP Builder. Ask me for missing details first, then produce a practical output with a review checklist."
+        "id": "sop-builder",
+        "icon": "📋",
+        "title": "SOP Builder",
+        "category": "Workflow",
+        "summary": "Turn an observed process into a practical SOP with roles, steps, controls and exceptions.",
+        "when": [
+            "Documenting a repeatable process",
+            "Preparing onboarding material",
+            "Standardising inconsistent work"
+        ],
+        "needs": [
+            "Process purpose and trigger",
+            "Actual steps and systems",
+            "Roles, exceptions and quality checks"
+        ],
+        "steps": [
+            "Describe the process as it actually happens.",
+            "Identify decisions, hand-offs and exceptions.",
+            "Validate the draft with the people who perform the work."
+        ],
+        "prompt": "Build a practical SOP from the information below.\n\nProcess: [NAME]\nPurpose: [WHY IT EXISTS]\nTrigger: [WHAT STARTS IT]\nPeople/roles involved: [LIST]\nSystems or documents used: [LIST]\nActual steps: [PASTE]\nExceptions or common problems: [DETAILS]\nRequired checks/approvals: [DETAILS]\n\nCreate: scope, responsibilities, numbered procedure, decision points, exceptions, quality controls, records created and escalation path. Mark missing information as ‘To confirm’ rather than inventing it."
     },
     {
-      "title": "Prompt Builder",
-      "category": "Workflow",
-      "description": "Reusable Vanilla workflow. Open from Toolbox or pin to sidebar.",
-      "prompt": "Use this workflow for Prompt Builder. Ask me for missing details first, then produce a practical output with a review checklist."
+        "id": "prompt-builder",
+        "icon": "🧠",
+        "title": "Prompt Builder",
+        "category": "Workflow",
+        "summary": "Turn a repeated task into a reliable prompt with inputs, rules, output format and checks.",
+        "when": [
+            "A task is repeated often",
+            "ChatGPT outputs keep drifting",
+            "You need a prompt other staff can reuse"
+        ],
+        "needs": [
+            "Task objective",
+            "Required inputs and rules",
+            "Example of a good output"
+        ],
+        "steps": [
+            "Describe the task and failure points.",
+            "Define mandatory inputs and output structure.",
+            "Test the prompt on at least two different examples."
+        ],
+        "prompt": "Design a reusable prompt for this task.\n\nTask: [DESCRIPTION]\nUser and audience: [WHO]\nRequired inputs: [LIST]\nRules that must always be followed: [LIST]\nThings it must never invent or change: [LIST]\nRequired output structure: [DETAILS]\nExample of a good result: [PASTE OR DESCRIBE]\nCommon failure points: [LIST]\n\nProduce a copy-ready prompt with: role, objective, input checklist, step-by-step method, validation rules, output format, clarification behaviour and a final quality check. Keep it practical rather than bloated."
     }
-  ]
+]
 };

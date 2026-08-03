@@ -1,5 +1,5 @@
 window.ACADEMY_UPLOADS = {
-  "generatedAt": "2026-08-03T04:06:38.597Z",
+  "generatedAt": "2026-08-03T05:25:21.998Z",
   "announcements": [
     {
       "id": "chatgpt-best-practices-2026-08",
@@ -13,7 +13,10 @@ window.ACADEMY_UPLOADS = {
         "type": "guide",
         "id": "chatgpt-best-practices"
       },
-      "linkText": "Open guide"
+      "linkText": "Open guide",
+      "required": true,
+      "acknowledgement": "required",
+      "estimatedReadTime": "5 mins"
     }
   ],
   "courses": []

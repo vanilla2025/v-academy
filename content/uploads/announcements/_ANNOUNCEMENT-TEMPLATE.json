@@ -10,5 +10,8 @@
     "type": "guide",
     "id": "chatgpt-best-practices"
   },
-  "linkText": "Read more"
+  "linkText": "Read more",
+  "required": false,
+  "acknowledgement": "optional",
+  "estimatedReadTime": "3 mins"
 }

@@ -7,7 +7,7 @@
 3. The announcement file lives at `content/uploads/announcements/2026-08-chatgpt-best-practices.json`.
 4. Its `destination` points to that guide ID.
 5. `npm run build` scans the announcement folder and rebuilds `content/uploads-manifest.js`.
-6. The dashboard reads the manifest and displays the announcement under **What's new**.
+6. The dashboard reads the manifest and displays the announcement on the **Bulletin Board** and, when required, at the top of the dashboard.
 7. Clicking **Open guide** changes only the Academy's right panel. The sidebar, user profile and progress remain visible.
 
 ## Direct link for staff
@@ -81,3 +81,17 @@ When screenshots or interface wording changes:
 - Build command: `npm run build`
 - Build output directory: `.`
 - Root directory: leave blank
+
+
+## Bulletin Board behaviour
+
+- A published announcement exists on the Bulletin Board immediately after deployment.
+- It does not depend on the employee clicking it from the dashboard.
+- Required unread items are also surfaced at the top of the dashboard.
+- Opening an item records an open event but does not remove it.
+- Acknowledging required reading changes its status to read and removes the required-action banner from that employee's dashboard.
+- The item remains available on the Bulletin Board as a permanent record.
+
+## Administration
+
+Administration is no longer a main-menu destination. Authorised Trainer and Administrator accounts can unlock maintenance controls from **Settings > Secured administration** using the existing Apps Script PIN check.

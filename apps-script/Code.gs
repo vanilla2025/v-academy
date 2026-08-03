@@ -1,5 +1,5 @@
 /***************************************************************
- * V | Academy Reporting API v1.4
+ * V | Academy Reporting API v1.6
  * Google Apps Script Web App backend
  *
  * Deploy as Web App:
@@ -45,7 +45,7 @@ function doGet(e) {
     else if (action === 'dashboard') result = buildDashboard_(e.parameter.pin, e.parameter.email);
     else if (action === 'cleanup_noise') result = cleanupNoise_(e.parameter.pin, e.parameter.email);
     else if (action === 'rebuild_users') result = rebuildUsers_(e.parameter.pin, e.parameter.email);
-    else result = { ok: true, app: 'V | Academy Reporting API', version: '1.5', message: 'API is live.' };
+    else result = { ok: true, app: 'V | Academy Reporting API', version: '1.6', message: 'API is live.' };
 
     return callback ? jsonpResponse_(callback, result) : jsonResponse_(result);
   } catch (err) {
