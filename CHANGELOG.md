@@ -1,12 +1,10 @@
-# CHANGELOG
+## 3.7.0 - Navigation and Projects polish (3 Aug 2026)
 
-## 3.6.0 - Bulletin reading progress (3 Aug 2026)
-
-- Added opened, in-progress and acknowledged states for required guides.
-- Saved the furthest reading position from 0–100% in the learner browser.
-- Reported progress milestones at 25%, 50%, 75% and 100% to reduce Event_Log noise.
-- Added matching Event_Log fields for progress, status, opened time and acknowledgement time.
-- Changed Apps Script event writing to map values by column heading so existing reporting templates remain aligned.
+- Changed Bulletin Board icon to a megaphone so it no longer duplicates Pinned tools.
+- Changed Training icon to a clearer books icon.
+- Added the real shared Project workflow used by Property Managers and Assistant PMs.
+- Clarified that the Project must be shared and meeting-note chats must be created or saved inside that Project.
+- Added dedicated Event_Log reporting columns for bulletin reading progress while preserving Data JSON.
 
 ## 3.5.2 - Required bulletin startup flow (3 Aug 2026)
 

@@ -1313,8 +1313,9 @@ window.ACADEMY_CATALOG = {
       "title": "Projects",
       "icon": "📁",
       "summary": "Use Projects for ongoing work with repeated files, instructions and chats.",
-      "why": "Projects are not for every staff task. They are useful when the work continues over days/weeks or needs files and repeated context.",
+      "why": "Projects are useful when work continues over days or weeks, needs repeated files and instructions, or must be shared between staff. They are not needed for every quick task.",
       "use": [
+        "Shared PM and Assistant PM client follow-up",
         "Training builds",
         "Tribunal matter",
         "Marketing campaign",
@@ -1324,8 +1325,13 @@ window.ACADEMY_CATALOG = {
       "avoid": [
         "One quick email",
         "Simple rewrites",
-        "Creating a project for everything"
+        "Creating a Project for every conversation",
+        "Starting the follow-up chat outside the shared Project"
       ],
+      "teamTip": {
+        "title": "Shared Project example: PM meeting follow-up",
+        "text": "A Property Manager and Assistant PM can share one Project. After a client meeting, the PM can use voice chat to capture the meeting notes. The Assistant PM can then see the notes and start the follow-up work immediately. For this to work, the Project must be shared with the Assistant PM and the PM must make sure the chat is created or saved inside that specific shared Project."
+      },
       "prompts": [
         {
           "title": "Project setup",

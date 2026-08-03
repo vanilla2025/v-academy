@@ -1,5 +1,5 @@
 /***************************************************************
- * V | Academy Reporting API v1.7
+ * V | Academy Reporting API v1.8
  * Google Apps Script Web App backend
  *
  * Deploy as Web App:
@@ -26,7 +26,7 @@ const CONFIG = {
 
 const HEADERS = {
   Users: ['Email', 'Name', 'Role', 'First Seen', 'Last Seen', 'Current Course', 'Overall Progress', 'Badges Count', 'Certificates Count', 'Last Event'],
-  Event_Log: ['Timestamp', 'Event ID', 'Email', 'Name', 'Role', 'Course ID', 'Course Name', 'Chapter ID', 'Chapter Name', 'Lesson ID', 'Lesson Name', 'Event Type', 'Event Name', 'Item ID', 'Item Name', 'Progress %', 'Status', 'Opened At', 'Acknowledged At', 'Data'],
+  Event_Log: ['Timestamp', 'Event ID', 'Email', 'Name', 'Role', 'Course ID', 'Course Name', 'Chapter ID', 'Chapter Name', 'Lesson ID', 'Lesson Name', 'Event Type', 'Event Name', 'Item ID', 'Item Name', 'Data JSON', 'Source', 'User Agent', 'Progress %', 'Status', 'Opened At', 'Acknowledged At'],
   Badges: ['Timestamp', 'Email', 'Name', 'Role', 'Course', 'Badge ID', 'Badge Name', 'Data'],
   Certificates: ['Timestamp', 'Email', 'Name', 'Role', 'Course', 'Certificate ID', 'Certificate Name', 'Data'],
   Favourites: ['Timestamp', 'Email', 'Name', 'Role', 'Course', 'Prompt ID', 'Prompt Title', 'Prompt Text', 'Action'],
@@ -45,7 +45,7 @@ function doGet(e) {
     else if (action === 'dashboard') result = buildDashboard_(e.parameter.pin, e.parameter.email);
     else if (action === 'cleanup_noise') result = cleanupNoise_(e.parameter.pin, e.parameter.email);
     else if (action === 'rebuild_users') result = rebuildUsers_(e.parameter.pin, e.parameter.email);
-    else result = { ok: true, app: 'V | Academy Reporting API', version: '1.7', message: 'API is live.' };
+    else result = { ok: true, app: 'V | Academy Reporting API', version: '1.8', message: 'API is live.' };
 
     return callback ? jsonpResponse_(callback, result) : jsonResponse_(result);
   } catch (err) {
@@ -221,7 +221,10 @@ function appendEvent_(p, eventType) {
     'Status': p.status || '',
     'Opened At': p.openedAt || '',
     'Acknowledged At': p.acknowledgedAt || '',
-    'Data': JSON.stringify(p.data || p)
+    'Data': JSON.stringify(p.data || p),
+    'Data JSON': JSON.stringify(p.data || p),
+    'Source': (p.data && p.data.source) || '',
+    'User Agent': (p.data && p.data.userAgent) || ''
   };
   appendMappedRow_(sheet, values);
 }

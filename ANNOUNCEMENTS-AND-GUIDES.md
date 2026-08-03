@@ -96,7 +96,7 @@ When screenshots or interface wording changes:
 
 Administration is no longer a main-menu destination. Authorised Trainer and Administrator accounts can unlock maintenance controls from **Settings > Secured administration** using the existing Apps Script PIN check.
 
-## Reading progress and reporting (V3.6.0)
+## Reading progress and reporting (V3.7.0)
 
 Required guide notices now have three learner states:
 
