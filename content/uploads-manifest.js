@@ -1,0 +1,17 @@
+window.ACADEMY_UPLOADS = {
+  "generatedAt": "2026-08-03T03:35:37.767Z",
+  "announcements": [
+    {
+      "id": "chatgpt-best-practices-2026-08",
+      "title": "ChatGPT Best Practices guide",
+      "summary": "Learn which intelligence level to use, how to check your usage, and when to use Canva instead of ChatGPT.",
+      "badge": "Required reading",
+      "published": "03/08/2026",
+      "priority": 100,
+      "status": "published",
+      "link": "guides/chatgpt-best-practices/",
+      "linkText": "Open guide"
+    }
+  ],
+  "courses": []
+};

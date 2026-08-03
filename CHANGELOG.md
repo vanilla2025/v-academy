@@ -49,3 +49,10 @@
 ## 2.0
 
 -   Initial Academy framework.
+
+## 3.2 - Content uploads (3 Aug 2026)
+
+- Added JSON-based announcement uploads.
+- Added JSON-based course uploads through a build-generated manifest.
+- Added ChatGPT Best Practices as a permanent guide within the Academy domain.
+- Preserved the existing Google Apps Script reporting integration and deployment URL.

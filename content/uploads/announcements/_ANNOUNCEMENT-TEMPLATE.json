@@ -1,0 +1,11 @@
+{
+  "id": "unique-announcement-id",
+  "title": "Announcement title",
+  "summary": "A short explanation for staff.",
+  "badge": "New",
+  "published": "03/08/2026",
+  "priority": 10,
+  "status": "draft",
+  "link": "",
+  "linkText": "Read more"
+}

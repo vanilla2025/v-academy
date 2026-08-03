@@ -1,0 +1,27 @@
+{
+  "id": "unique_course_id",
+  "title": "Course title",
+  "icon": "🎓",
+  "category": "Core Learning",
+  "description": "What this course teaches.",
+  "recommendedFor": ["All staff"],
+  "status": "draft",
+  "modules": [
+    {"heading": "Module 1", "lessons": ["lesson_one"]}
+  ],
+  "lessons": {
+    "lesson_one": {
+      "id": "lesson_one",
+      "title": "Lesson title",
+      "icon": "📘",
+      "time": "5 mins",
+      "why": "Why this matters.",
+      "when": ["Use case one"],
+      "avoid": ["Important caution"],
+      "tools": ["ChatGPT"],
+      "prompts": [{"title": "Example prompt", "text": "Write your prompt here."}],
+      "mission": ["Complete a practical task."],
+      "congrats": "Lesson complete."
+    }
+  }
+}
