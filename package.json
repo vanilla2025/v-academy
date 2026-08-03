@@ -1,6 +1,6 @@
 {
   "name": "v-academy",
   "private": true,
-  "version": "3.5.2",
+  "version": "3.6.0",
   "scripts": {"build": "node scripts/build-content.js"}
 }

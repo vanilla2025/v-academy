@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 3.6.0 - Bulletin reading progress (3 Aug 2026)
+
+- Added opened, in-progress and acknowledged states for required guides.
+- Saved the furthest reading position from 0–100% in the learner browser.
+- Reported progress milestones at 25%, 50%, 75% and 100% to reduce Event_Log noise.
+- Added matching Event_Log fields for progress, status, opened time and acknowledgement time.
+- Changed Apps Script event writing to map values by column heading so existing reporting templates remain aligned.
+
 ## 3.5.2 - Required bulletin startup flow (3 Aug 2026)
 
 - Required unread bulletins now open as a dedicated first screen.

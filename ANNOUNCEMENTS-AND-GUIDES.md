@@ -95,3 +95,21 @@ When screenshots or interface wording changes:
 ## Administration
 
 Administration is no longer a main-menu destination. Authorised Trainer and Administrator accounts can unlock maintenance controls from **Settings > Secured administration** using the existing Apps Script PIN check.
+
+## Reading progress and reporting (V3.6.0)
+
+Required guide notices now have three learner states:
+
+1. **Opened** — recorded when the guide first loads.
+2. **In progress** — the browser saves the furthest scroll position from 0–100%. Events are sent only when 25%, 50%, 75% and 100% are reached.
+3. **Acknowledged** — recorded only when the learner clicks **I have read this**. This sets progress to 100% but remains a separate formal acknowledgement.
+
+The Apps Script writes values by matching the headings already present in `Event_Log`. It adds these columns if they are missing:
+
+- Event ID
+- Progress %
+- Status
+- Opened At
+- Acknowledged At
+
+Do not manually reorder rows to make the integration work. Column order is allowed to vary because the script maps values by heading.

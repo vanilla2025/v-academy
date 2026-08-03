@@ -1,5 +1,5 @@
 /***************************************************************
- * V | Academy Reporting API v1.6
+ * V | Academy Reporting API v1.7
  * Google Apps Script Web App backend
  *
  * Deploy as Web App:
@@ -26,7 +26,7 @@ const CONFIG = {
 
 const HEADERS = {
   Users: ['Email', 'Name', 'Role', 'First Seen', 'Last Seen', 'Current Course', 'Overall Progress', 'Badges Count', 'Certificates Count', 'Last Event'],
-  Event_Log: ['Timestamp', 'Email', 'Name', 'Role', 'Course', 'Chapter', 'Lesson ID', 'Event Type', 'Event Name', 'Item ID', 'Item Name', 'Data'],
+  Event_Log: ['Timestamp', 'Event ID', 'Email', 'Name', 'Role', 'Course ID', 'Course Name', 'Chapter ID', 'Chapter Name', 'Lesson ID', 'Lesson Name', 'Event Type', 'Event Name', 'Item ID', 'Item Name', 'Progress %', 'Status', 'Opened At', 'Acknowledged At', 'Data'],
   Badges: ['Timestamp', 'Email', 'Name', 'Role', 'Course', 'Badge ID', 'Badge Name', 'Data'],
   Certificates: ['Timestamp', 'Email', 'Name', 'Role', 'Course', 'Certificate ID', 'Certificate Name', 'Data'],
   Favourites: ['Timestamp', 'Email', 'Name', 'Role', 'Course', 'Prompt ID', 'Prompt Title', 'Prompt Text', 'Action'],
@@ -45,7 +45,7 @@ function doGet(e) {
     else if (action === 'dashboard') result = buildDashboard_(e.parameter.pin, e.parameter.email);
     else if (action === 'cleanup_noise') result = cleanupNoise_(e.parameter.pin, e.parameter.email);
     else if (action === 'rebuild_users') result = rebuildUsers_(e.parameter.pin, e.parameter.email);
-    else result = { ok: true, app: 'V | Academy Reporting API', version: '1.6', message: 'API is live.' };
+    else result = { ok: true, app: 'V | Academy Reporting API', version: '1.7', message: 'API is live.' };
 
     return callback ? jsonpResponse_(callback, result) : jsonResponse_(result);
   } catch (err) {
@@ -87,11 +87,14 @@ function normalisePayload_(raw) {
   const profile = raw.profile || {};
   const event = raw.event || {};
   const data = raw.data || {};
+  const eventData = event.data || {};
   return {
     email: raw.email || profile.email || '',
     name: raw.name || profile.name || '',
     role: raw.role || profile.role || '',
+    courseId: raw.courseId || raw.course_id || event.courseId || event.course_id || data.courseId || profile.currentCourse || '',
     course: raw.course || event.course || data.course || profile.currentCourse || '',
+    chapterId: raw.chapterId || raw.chapter_id || event.chapterId || event.chapter_id || data.chapterId || '',
     chapter: raw.chapter || event.chapter || data.chapter || '',
     lessonId: raw.lessonId || raw.lesson_id || event.lessonId || event.lesson_id || data.lessonId || '',
     eventType: raw.eventType || raw.event_type || event.type || 'event',
@@ -106,7 +109,10 @@ function normalisePayload_(raw) {
     promptTitle: raw.promptTitle || event.promptTitle || event.itemName || '',
     promptText: raw.promptText || event.promptText || '',
     overallProgress: raw.overallProgress || raw.progress || profile.overallProgress || data.overallProgress || data.progress || '',
-    progress: raw.progress || data.progress || '',
+    progress: raw.progress ?? event.progress ?? eventData.progress ?? data.progress ?? '',
+    status: raw.status || event.status || eventData.status || data.status || '',
+    openedAt: raw.openedAt || event.openedAt || eventData.openedAt || data.openedAt || '',
+    acknowledgedAt: raw.acknowledgedAt || event.acknowledgedAt || eventData.acknowledgedAt || data.acknowledgedAt || '',
     badgesCount: raw.badgesCount || profile.badgesCount || '',
     certificatesCount: raw.certificatesCount || profile.certificatesCount || '',
     data: raw
@@ -125,6 +131,7 @@ function ensureSheets_() {
     let sheet = ss.getSheetByName(name);
     if (!sheet) sheet = ss.insertSheet(name);
     ensureHeader_(sheet, HEADERS[name]);
+    if (name === CONFIG.EVENT_LOG_SHEET) ensureColumns_(sheet, HEADERS.Event_Log);
   });
   seedPermissions_();
 }
@@ -150,6 +157,24 @@ function ensureHeader_(sheet, headers) {
   }
 }
 
+function ensureColumns_(sheet, requiredHeaders) {
+  const lastColumn = Math.max(sheet.getLastColumn(), 1);
+  const current = sheet.getRange(1, 1, 1, lastColumn).getValues()[0].map(v => String(v || '').trim());
+  const missing = requiredHeaders.filter(h => !current.includes(h));
+  if (!missing.length) return;
+  const start = current.length + 1;
+  sheet.getRange(1, start, 1, missing.length).setValues([missing]);
+  sheet.getRange(1, start, 1, missing.length).setFontWeight('bold');
+  sheet.setFrozenRows(1);
+}
+
+function appendMappedRow_(sheet, valuesByHeader) {
+  const width = Math.max(sheet.getLastColumn(), 1);
+  const headers = sheet.getRange(1, 1, 1, width).getValues()[0].map(v => String(v || '').trim());
+  const row = headers.map(header => Object.prototype.hasOwnProperty.call(valuesByHeader, header) ? valuesByHeader[header] : '');
+  sheet.appendRow(row);
+}
+
 function upsertUser_(p, eventType) {
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(CONFIG.USERS_SHEET);
   const email = normaliseEmail_(p.email);
@@ -172,7 +197,33 @@ function upsertUser_(p, eventType) {
 
 function appendEvent_(p, eventType) {
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(CONFIG.EVENT_LOG_SHEET);
-  sheet.appendRow([now_(), normaliseEmail_(p.email), p.name || '', p.role || '', p.course || '', p.chapter || '', p.lessonId || '', eventType, p.eventName || '', p.itemId || p.badgeId || p.certificateId || p.promptId || '', p.itemName || p.badgeName || p.certificateName || p.promptTitle || '', JSON.stringify(p.data || p)]);
+  const eventId = Utilities.getUuid();
+  const values = {
+    'Timestamp': now_(),
+    'Event ID': eventId,
+    'Email': normaliseEmail_(p.email),
+    'Name': p.name || '',
+    'Role': p.role || '',
+    'Course ID': p.courseId || slug_(p.course || ''),
+    'Course': p.course || '',
+    'Course Name': p.course || '',
+    'Chapter ID': p.chapterId || slug_(p.chapter || ''),
+    'Chapter': p.chapter || '',
+    'Chapter Name': p.chapter || '',
+    'Lesson ID': p.lessonId || '',
+    'Lesson Name': p.itemName || p.eventName || '',
+    'Event Type': eventType,
+    'Event Name': p.eventName || '',
+    'Item ID': p.itemId || p.badgeId || p.certificateId || p.promptId || '',
+    'Item Name': p.itemName || p.badgeName || p.certificateName || p.promptTitle || '',
+    'Progress': p.progress,
+    'Progress %': p.progress,
+    'Status': p.status || '',
+    'Opened At': p.openedAt || '',
+    'Acknowledged At': p.acknowledgedAt || '',
+    'Data': JSON.stringify(p.data || p)
+  };
+  appendMappedRow_(sheet, values);
 }
 
 function appendBadge_(p) {
