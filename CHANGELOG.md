@@ -1,4 +1,12 @@
-## 3.7.0 - Navigation and Projects polish (3 Aug 2026)
+# CHANGELOG
+
+## 3.8.0 - Interactive Prompt Builder & Prompt Quality (6 Aug 2026)
+
+- Restored a genuinely interactive Prompt Builder with live fields, example loading, clear/reset controls and copy-ready output.
+- Added a Dashboard section explaining what VORSI represents in practice and what it is for.
+- Reviewed sample prompts across Training, capabilities and workflows; strengthened context, output structure, safeguards and practical relevance.
+- Added clearer prompt guidance so staff understand what they are copying and how to adapt it.
+
 
 - Changed Bulletin Board icon to a megaphone so it no longer duplicates Pinned tools.
 - Changed Training icon to a clearer books icon.

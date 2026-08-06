@@ -34,3 +34,16 @@
 }
 .teamTip .eyebrow { margin-bottom: 6px; }
 .teamTip p { max-width: 1000px; }
+
+/* V3.8.0 interactive prompt builder and VORSI purpose */
+.vorsiPanel{background:linear-gradient(135deg,#fff4dc,#fff 72%);border-left:6px solid var(--vanilla)}
+.vorsiPanel>p{max-width:980px;font-size:17px}
+.promptHint{margin:0 0 10px;color:#7a6750}
+.builderPanel{border:2px solid var(--gold);background:linear-gradient(135deg,#fffaf0,#fff)}
+.builderGrid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);gap:20px;align-items:start;margin-top:18px}
+.builderFields{display:grid;gap:13px}.builderFields label{display:grid;gap:6px}
+.builderOutput{position:sticky;top:16px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px}
+.builderOutputHead{display:flex;justify-content:space-between;gap:12px;align-items:center}
+.builderOutput .promptPreview{min-height:360px;max-height:560px}.builderOutput .promptPreview pre{min-height:330px}
+#copyBuiltPrompt:disabled{opacity:.45;cursor:not-allowed;transform:none;box-shadow:none}
+@media(max-width:1000px){.builderGrid{grid-template-columns:1fr}.builderOutput{position:static}.builderOutput .promptPreview{min-height:260px}.builderOutput .promptPreview pre{min-height:230px}}

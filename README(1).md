@@ -1,7 +1,7 @@
 # V \| Academy
 
-**Version:** 3.1 -- Workflow OS\
-**Release Date:** 1 July 2026
+**Version:** 3.8.0 -- Interactive Prompt Builder & Prompt Quality\
+**Release Date:** 6 August 2026
 
 ## Overview
 
@@ -19,6 +19,13 @@ teaching real workplace workflows supported by AI.
 -   AI Foundations teaches practical day-to-day work.
 -   AI Features acts as a capability reference library.
 -   Toolbox becomes a reusable workflow library.
+
+### V3.8.0 Highlights
+
+- Restored the interactive Prompt Builder with live fields and copy-ready output.
+- Added a Dashboard section explaining what VORSI represents in practice and what it is for.
+- Reviewed and strengthened sample prompts across Training, capabilities and workflows.
+- Added clearer guidance around adapting prompts before copying them.
 
 ### AI Foundations
 

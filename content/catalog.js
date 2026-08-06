@@ -100,7 +100,7 @@ window.ACADEMY_CATALOG = {
             },
             {
               "title": "Bad news email",
-              "text": "Draft a professional email explaining this bad news clearly and calmly. Context: [PASTE]. Include empathy, the reason, next steps and what the recipient can do."
+              "text": "Draft a professional email communicating the difficult update below. Lead with the purpose, acknowledge the impact without over-apologising, explain the verified reason in plain English, separate what has already happened from what happens next, and give the recipient one clear action or contact point. Do not admit liability, invent promises or soften the facts beyond recognition. Context: [PASTE]"
             },
             {
               "title": "De-escalate",
@@ -283,19 +283,19 @@ window.ACADEMY_CATALOG = {
           "prompts": [
             {
               "title": "Structured prompt",
-              "text": "Act as [ROLE]. I need to [TASK]. Audience: [AUDIENCE]. Context: [FACTS]. Tone: [TONE]. Output format: [FORMAT]. Constraints: [LIMITS]. Ask questions if needed before drafting."
+              "text": "You are acting as [ROLE] to help me complete [TASK]. The result is for [AUDIENCE]. Use only these verified facts and source materials: [FACTS / INPUTS]. Write in a [TONE] tone and return the result as [FORMAT]. Follow these rules: [LIMITS / NON-NEGOTIABLES]. Separate facts from assumptions, do not invent dates, amounts, decisions or commitments, and ask targeted questions first if missing information could materially change the result. Finish with a quick quality check against the audience, purpose and constraints."
             },
             {
               "title": "Improve my prompt",
-              "text": "Improve this prompt so it gives clearer instructions, better context and safer output. Prompt: [PASTE]"
+              "text": "Improve the prompt below so another staff member could use it reliably. First identify what is missing or ambiguous. Then produce a copy-ready version with a clear objective, audience, required inputs, method, output structure, boundaries, clarification behaviour and final quality check. Keep it practical rather than bloated. Original prompt: [PASTE]"
             },
             {
               "title": "Ask questions first",
-              "text": "Before drafting, ask me the 5 most important questions you need answered. The task is: [TASK]."
+              "text": "Before attempting this task, ask only the questions that would materially improve the result. Prioritise missing facts, audience, desired outcome, source material, deadlines and constraints. Ask no more than five questions at once. Task: [TASK]."
             },
             {
               "title": "Create reusable template",
-              "text": "Turn this prompt into a reusable template with placeholders. Prompt: [PASTE]"
+              "text": "Turn the prompt below into a reusable team template. Replace changing details with clearly named placeholders, add an input checklist, define what the AI must not invent, specify the required output and include a short final review step. Keep the template easy enough for a new staff member to use. Prompt: [PASTE]"
             }
           ],
           "mission": [
@@ -539,7 +539,7 @@ window.ACADEMY_CATALOG = {
           "prompts": [
             {
               "title": "Owner explainer",
-              "text": "Create a short owner education post explaining [TOPIC] for Queensland rental property owners. Keep it useful, practical and under 220 words."
+              "text": "Create a short educational post for Queensland rental property owners about [TOPIC]. Open with a real question an owner might ask, explain the issue in plain English, give three practical takeaways, and finish with one sensible action to consider. Keep it under 220 words, avoid scare tactics and clearly flag anything that depends on current legislation or individual circumstances."
             },
             {
               "title": "Content series",
@@ -708,7 +708,7 @@ window.ACADEMY_CATALOG = {
           "prompts": [
             {
               "title": "Routine inspection follow-up",
-              "text": "Turn these routine inspection notes into tenant action items, owner summary and internal follow-up tasks. Keep the tone professional. Notes: [PASTE]."
+              "text": "Turn these routine inspection notes into three clearly separated outputs: 1) factual tenant action items with reasonable wording, 2) a concise owner summary focused on condition, risk and next steps, and 3) an internal task list with owner, priority and evidence required. Preserve photo references. Do not infer cause, responsibility or damage beyond the notes. Notes: [PASTE]."
             },
             {
               "title": "Exit report wording",
@@ -1031,7 +1031,7 @@ window.ACADEMY_CATALOG = {
           "prompts": [
             {
               "title": "Minutes builder",
-              "text": "Turn these notes into minutes with attendees, topics, decisions, action items, owners and due dates. Notes: [PASTE]."
+              "text": "Turn these notes into concise meeting minutes with: purpose, attendees, discussion by topic, confirmed decisions, action register with owner and due date, unresolved questions and items requiring verification. Do not convert suggestions into decisions or assign an owner where none was agreed; use ‘To confirm’. Notes: [PASTE]."
             },
             {
               "title": "Action extract",
@@ -1101,7 +1101,7 @@ window.ACADEMY_CATALOG = {
           "prompts": [
             {
               "title": "Report commentary",
-              "text": "Turn these figures into a short management commentary. Explain trends, risks and what to watch. Data: [PASTE]."
+              "text": "Turn the figures below into a short management commentary for [AUDIENCE]. Identify the three most important movements, what may be driving them, material risks, unusual results and what should be monitored next. Distinguish facts from interpretation, avoid claiming causation without evidence, and finish with two practical questions for management. Data: [PASTE]."
             },
             {
               "title": "Table insights",
@@ -1140,15 +1140,15 @@ window.ACADEMY_CATALOG = {
       "prompts": [
         {
           "title": "Morning triage",
-          "text": "Review my unread emails from the past 24 hours. Group them into Urgent, Follow-up, Waiting on Others and Information Only. Give me a practical action list."
+          "text": "Review my unread emails from the past 24 hours. Group them into Urgent, Follow-up, Waiting on Others and Information Only. For each actionable email, show the sender, property or subject, why it matters, the next action, and a suggested deadline. Separate genuine priorities from messages that only look urgent. Do not send, archive or modify anything."
         },
         {
           "title": "Thread prep",
-          "text": "Summarise all emails with [NAME] from the last month. Highlight concerns, promises, missing information and suggested next action."
+          "text": "Summarise all emails with [NAME] from the last month as a practical briefing. Show the timeline, key concerns, decisions, promises made by either party, missing information, unresolved questions and the best next action. Quote dates or amounts only where they appear in the emails. Do not assume a matter is resolved unless the thread confirms it."
         },
         {
           "title": "Follow-up finder",
-          "text": "Find conversations where I may owe someone a reply or promised to get back to them."
+          "text": "Find conversations from the past [PERIOD] where I may owe someone a reply, promised to follow up, or received a question that was not clearly answered. Return a table with person, property or subject, last meaningful message, outstanding commitment, urgency and a suggested follow-up. Exclude newsletters, automated notices and threads that are clearly complete."
         }
       ]
     },
@@ -1171,11 +1171,11 @@ window.ACADEMY_CATALOG = {
       "prompts": [
         {
           "title": "Plan my day",
-          "text": "Review today’s calendar and create a practical work plan with preparation time, follow-up time and likely pressure points."
+          "text": "Review today’s calendar and create a realistic work plan. Include preparation time before each appointment, likely travel or transition time, follow-up blocks, two short admin windows and any pressure points or clashes. Identify the three outcomes that matter most today and flag anything that should be moved rather than squeezed in."
         },
         {
           "title": "Prepare appointments",
-          "text": "For each appointment today, tell me what to prepare, questions to ask and follow-up likely needed."
+          "text": "For each appointment today, prepare a short briefing with: purpose, people involved, relevant property or client context, documents or facts to check beforehand, five useful questions, likely risks or sensitivities, and the follow-up that should be scheduled immediately afterwards. Do not invent context that is not available."
         },
         {
           "title": "Find focus time",
@@ -1335,11 +1335,11 @@ window.ACADEMY_CATALOG = {
       "prompts": [
         {
           "title": "Project setup",
-          "text": "I am creating a Project for [WORKFLOW]. Suggest a clear name, purpose, file list, project instructions and first 5 chats."
+          "text": "I am creating a shared ChatGPT Project for [WORKFLOW]. Design a practical setup with: a clear Project name, purpose, who should have access, files or reference material to add, standing Project instructions, naming rules for chats, and the first five useful chats to create. Include a reminder that team members must start or save relevant conversations inside the shared Project for others to see them."
         },
         {
           "title": "Project or chat",
-          "text": "Should this task be a normal chat or a Project? Task: [PASTE]. Explain why."
+          "text": "Decide whether this work should be handled in a normal chat, a reusable prompt, or a shared ChatGPT Project. Work description: [PASTE]. Consider repetition, duration, files, shared access, privacy, hand-offs and whether future conversations need the same context. Give a clear recommendation and, if a Project is appropriate, propose a simple structure."
         },
         {
           "title": "Project instructions",
@@ -1394,11 +1394,11 @@ window.ACADEMY_CATALOG = {
       "prompts": [
         {
           "title": "Vanilla rewrite",
-          "text": "Rewrite this in Vanilla Rentals tone: professional, clear, practical and not overdone. Text: [PASTE]"
+          "text": "Rewrite the text below in a Vanilla Rentals style: professional, clear, practical and human. Preserve every fact, date, amount and commitment. Remove repetition and jargon, make the next action obvious, and use soft headings only where they improve scanning. Then list any wording that may need factual or legal verification. Text: [PASTE]"
         },
         {
           "title": "Process checklist",
-          "text": "Turn this process into a checklist a Vanilla staff member can follow. Process: [PASTE]"
+          "text": "Turn the process below into a practical Vanilla staff checklist. Include the trigger, information needed before starting, numbered actions, decision points, hand-offs, records to save, quality checks and escalation points. Mark missing details as ‘To confirm’ rather than inventing them. Process: [PASTE]"
         }
       ]
     },
@@ -1448,11 +1448,11 @@ window.ACADEMY_CATALOG = {
       "prompts": [
         {
           "title": "Improve section",
-          "text": "Improve only this section. Keep the meaning and facts the same. Make it clearer and more structured: [PASTE]"
+          "text": "Improve only the section below. Preserve its meaning, facts, dates, amounts and commitments. Make it easier to scan, remove repetition, strengthen the logical order and use headings or bullets only where they genuinely help. After the rewrite, briefly note any ambiguity or missing evidence you did not resolve. Section: [PASTE]"
         },
         {
           "title": "Document audit",
-          "text": "Review this document for structure, duplication, missing sections and unclear wording. Do not rewrite yet. Document: [PASTE]"
+          "text": "Audit the document below before any rewriting. Identify structural problems, duplicated ideas, missing sections, unclear wording, inconsistent terminology, unsupported claims and places where the reader may not know what action to take. Return findings by priority with a recommended revision plan. Do not rewrite the document yet. Document: [PASTE]"
         }
       ]
     },
@@ -1473,7 +1473,7 @@ window.ACADEMY_CATALOG = {
       "prompts": [
         {
           "title": "Safety check",
-          "text": "Review this AI-generated response. Flag unsupported claims, risky wording, privacy issues, missing facts and anything I should verify before using it. Text: [PASTE]"
+          "text": "Review this AI-generated response as a final safety and quality check. Separate: unsupported claims, facts that need verification, risky or overly certain wording, privacy or confidentiality concerns, missing context, legal or compliance concerns, and wording that could create an unintended promise. Finish with a clear recommendation: Safe to use, Use after edits, or Do not use yet. Text: [PASTE]"
         }
       ]
     }
