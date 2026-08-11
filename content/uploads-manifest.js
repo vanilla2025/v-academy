@@ -1,5 +1,5 @@
 window.ACADEMY_UPLOADS = {
-  "generatedAt": "2026-08-11T02:25:32.641Z",
+  "generatedAt": "2026-08-11T02:45:10.466Z",
   "announcements": [
     {
       "id": "chatgpt-best-practices-2026-08",
@@ -215,7 +215,9 @@ window.ACADEMY_UPLOADS = {
         }
       ],
       "slug": "rent-history",
-      "status": "published"
+      "status": "published",
+      "published": "2026-08-11",
+      "showAsNew": true
     }
   ],
   "workflows": [],

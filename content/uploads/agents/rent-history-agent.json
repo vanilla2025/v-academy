@@ -175,5 +175,7 @@
     }
   ],
   "slug": "rent-history",
-  "status": "published"
+  "status": "published",
+  "published": "2026-08-11",
+  "showAsNew": true
 }
