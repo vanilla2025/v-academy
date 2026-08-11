@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## 3.9.0 - RentHistory Agent Staff Guide (11 Aug 2026)
+
+- Added a dedicated RentHistory Agent training page inside Tools & Workflows.
+- Added four staff methods: full address, CMA upload, insert into CMA, and multi-property batch processing.
+- Added copyable prompt examples, step-by-step instructions, expected outputs and mobile-friendly method cards.
+- Added the approved rent-data rules, including exact address matching and use of the internal rental-history spreadsheet as the only rent-data source.
+- Added clear warnings against manual rent figures, estimates, CMA rent copying, combined-property reports and report redesign requests.
+- Added troubleshooting for unmatched properties, ambiguous CMA addresses, spreadsheet problems and disputed information.
+- Added a dedicated Kristie escalation box and FAQ.
+- Preserved the V3.8.0 interactive Prompt Builder and existing reporting integrations.
+
 ## 3.8.0 - Interactive Prompt Builder & Prompt Quality (6 Aug 2026)
 
 - Restored a genuinely interactive Prompt Builder with live fields, example loading, clear/reset controls and copy-ready output.

@@ -1,7 +1,7 @@
 # V \| Academy
 
-**Version:** 3.8.0 -- Interactive Prompt Builder & Prompt Quality\
-**Release Date:** 6 August 2026
+**Version:** 3.9.0 -- RentHistory Agent Staff Guide\
+**Release Date:** 11 August 2026
 
 ## Overview
 
@@ -20,12 +20,12 @@ teaching real workplace workflows supported by AI.
 -   AI Features acts as a capability reference library.
 -   Toolbox becomes a reusable workflow library.
 
-### V3.8.0 Highlights
+### V3.9.0 Highlights
 
-- Restored the interactive Prompt Builder with live fields and copy-ready output.
-- Added a Dashboard section explaining what VORSI represents in practice and what it is for.
-- Reviewed and strengthened sample prompts across Training, capabilities and workflows.
-- Added clearer guidance around adapting prompts before copying them.
+- Added a dedicated RentHistory Agent staff guide under Tools & Workflows.
+- Covers address-only reports, CMA uploads, CMA insertion and multi-property batches.
+- Includes copyable prompts, data rules, warnings, expected outputs, troubleshooting, Kristie escalation and FAQ.
+- Keeps the V3.8 interactive Prompt Builder and VORSI guidance unchanged.
 
 ### AI Foundations
 

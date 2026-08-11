@@ -47,3 +47,21 @@
 .builderOutput .promptPreview{min-height:360px;max-height:560px}.builderOutput .promptPreview pre{min-height:330px}
 #copyBuiltPrompt:disabled{opacity:.45;cursor:not-allowed;transform:none;box-shadow:none}
 @media(max-width:1000px){.builderGrid{grid-template-columns:1fr}.builderOutput{position:static}.builderOutput .promptPreview{min-height:260px}.builderOutput .promptPreview pre{min-height:230px}}
+
+
+/* V3.9.0 RentHistory Agent training page */
+.agentHero{border-left:6px solid var(--green)}
+.agentHero>p{max-width:920px;font-size:17px}
+.agentMethodGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:18px}
+.agentMethodCard{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:0 10px 24px rgba(20,20,20,.05)}
+.agentMethodTop{display:flex;gap:13px;align-items:flex-start;margin-bottom:12px}.agentMethodTop h3{font-size:21px;margin:2px 0 5px}.agentMethodTop p{margin:0;color:var(--muted)}
+.agentMethodNo{display:grid;place-items:center;flex:0 0 42px;width:42px;height:42px;border-radius:50%;background:var(--vanilla);color:#111;font-weight:900;font-size:18px}
+.agentMethodCard ol{padding-left:22px}.agentMethodCard li+li{margin-top:7px}
+.agentPrompt{margin:16px 0;border:1px solid #2c2c28;border-radius:15px;overflow:hidden;background:#171713;color:#fff}.agentPromptHead{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:10px 12px;background:#24231f}.agentPrompt pre{margin:0;padding:14px;white-space:pre-wrap;font:inherit;line-height:1.5}
+.agentNoPrompt{margin:16px 0;padding:14px;border-radius:14px;background:#edf9f2;border:1px solid #b8e4cc;color:#155f3d}
+.agentExpected{padding:14px;border-radius:14px;background:#fff8e9;border:1px solid #ffe0aa}.agentExpected ul{margin-bottom:0}
+.agentRules{background:linear-gradient(135deg,#fffaf1,#fff)}.agentWarning{padding:20px;border-radius:18px;background:#fff4f1;border:1px solid #efc2ba}.agentWarning .eyebrow{color:var(--red)}
+.agentOutputGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:16px 0}.agentOutputItem{padding:11px 13px;border-radius:13px;background:#edf9f2;border:1px solid #c7e7d5;color:#185f40;font-weight:800}
+.escalationPanel{border:2px solid #efb14b;background:linear-gradient(135deg,#fff4dc,#fff)}.escalationPanel p{max-width:900px;font-size:16px}
+.faqAcademy{display:grid;gap:10px}.faqAcademy details{border:1px solid var(--line);border-radius:14px;background:#fffaf1;padding:0 14px}.faqAcademy summary{cursor:pointer;font-weight:900;padding:14px 0}.faqAcademy details p{margin:0;padding:0 0 14px;color:var(--muted)}
+@media(max-width:900px){.agentMethodGrid,.agentOutputGrid{grid-template-columns:1fr}}
