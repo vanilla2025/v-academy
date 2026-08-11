@@ -86,3 +86,8 @@
 .bulletinTone-warning{border-left:5px solid #d89523;background:linear-gradient(135deg,#fff7e7,#fff)}
 .bulletinDetailActions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
 @media(max-width:720px){.bulletinDetailActions{align-items:stretch}.bulletinDetailActions .btn{width:100%;text-align:center}}
+
+
+/* V3.10.4 NEW badges on individual resource cards */
+.resourceCardMeta{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:2px}
+.cardNewBadge{display:inline-flex;align-items:center;justify-content:center;min-width:34px;padding:3px 7px;border-radius:999px;background:var(--vanilla);color:#15120c;font-size:9px;font-weight:1000;letter-spacing:.08em;line-height:1}

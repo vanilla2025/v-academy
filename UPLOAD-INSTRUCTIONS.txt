@@ -1,26 +1,32 @@
-V | Academy 3.10.1 - upload instructions
+V | Academy 3.10.4 - NEW badge on individual resource cards
 
-This is a PATCH package. Do not delete the rest of the repository.
-Replace/add the following files in GitHub, preserving these exact repository paths:
+WHAT THIS PATCH DOES
+- Adds a NEW badge directly to newly released Tool / Agent cards.
+- RentHistory Agent will show NEW inside Tools & Workflows while it is unseen.
+- The Tools & Workflows sidebar NEW badge and the RentHistory card NEW badge use the same seen state.
+- Opening RentHistory Agent clears both badges for that user/browser.
+- The card badge does not blink; the sidebar badge keeps the existing gentle pulse.
 
-1. js/app.js                         <- file supplied as js_app.js
-2. js/config.js                      <- file supplied as js_config.js
+FILES TO REPLACE
+Copy these files into the matching folders in your existing v-academy repository and choose Replace when prompted:
+
+1. js/app.js
+2. js/config.js
 3. css/academy.css
-4. content/catalog.js
-5. content/uploads-manifest.js
-6. content/uploads/announcements/2026-08-renthistory-and-plugin-read-only.json
-7. CHANGELOG.md
-8. README(1).md
-9. package.json
 
-IMPORTANT: Rename js_app.js to app.js inside the repository js folder.
-IMPORTANT: Rename js_config.js to config.js inside the repository js folder.
+DO NOT delete or replace the rest of your site.
+No Apps Script or Google Sheet change is required.
 
-Then commit/push to main. Cloudflare Pages should deploy automatically.
-After deployment, hard refresh V | Academy (Ctrl+F5).
+DEPLOYMENT
+1. Copy the three files above into your local GitHub v-academy folder.
+2. Commit and push to main.
+3. Wait for Cloudflare Pages to deploy.
+4. Refresh the site with Ctrl + F5.
+5. Confirm the sidebar shows Version 3.10.4.
 
-Checks:
-- Sidebar version says 3.10.1.
-- Bulletin Board shows "New RentHistory Agent + temporary Google Plugin limits".
-- Gmail, Calendar, and Plugins & Connected Apps pages show an amber Temporary access notice.
-- RentHistory Agent still opens at /agent/rent-history.
+TEST
+- Use a browser/profile that has not yet opened RentHistory Agent.
+- Tools & Workflows should show NEW in the sidebar.
+- Open Tools & Workflows. The RentHistory Agent card should also show NEW.
+- Click Open agent guide.
+- Return to Tools & Workflows. Both the sidebar and card NEW badges should be gone.
