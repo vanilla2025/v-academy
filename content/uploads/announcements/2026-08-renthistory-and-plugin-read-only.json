@@ -10,8 +10,47 @@
     "type": "agent",
     "id": "rent-history-agent"
   },
-  "linkText": "Open RentHistory Agent",
+  "linkText": "View update",
   "required": false,
-  "acknowledgement": "optional",
-  "estimatedReadTime": "1 min"
+  "acknowledgement": "none",
+  "estimatedReadTime": "1 min",
+  "type": "announcement",
+  "showAsNew": true,
+  "sections": [
+    {
+      "eyebrow": "New tool",
+      "title": "RentHistory Agent is now available",
+      "text": "The RentHistory Agent creates branded Vanilla Rentals Rental Increase History PDF reports from a full property address or a Cotality CMA.",
+      "points": [
+        "Use a full property address for a standalone report.",
+        "Upload a Cotality CMA and the agent can identify the subject property.",
+        "It can insert the Rental Increase History page into a CMA or process multiple properties in one request."
+      ],
+      "tone": "new"
+    },
+    {
+      "eyebrow": "Temporary limitation",
+      "title": "Gmail, Calendar and Drive are currently Read-only",
+      "text": "Plugin permissions are temporarily limited to Read access. ChatGPT can still find, review, summarise and analyse permitted information, but write actions will not complete until access is restored.",
+      "points": [
+        "Gmail: no sending, replying, archiving, labelling, deleting or other mailbox changes.",
+        "Calendar: no creating, editing, moving, accepting, declining or cancelling events.",
+        "Drive: no editing, moving, deleting or sharing files.",
+        "Drafting and planning prompts still work; complete the final write action manually when needed."
+      ],
+      "tone": "warning"
+    }
+  ],
+  "actions": [
+    {
+      "label": "Open RentHistory Agent",
+      "href": "/agent/rent-history",
+      "style": "gold"
+    },
+    {
+      "label": "Browse Tools & Workflows",
+      "href": "/tools",
+      "style": "secondary"
+    }
+  ]
 }

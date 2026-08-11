@@ -74,3 +74,15 @@
 .navNewBadge{display:inline-flex;align-items:center;justify-content:center;min-width:34px;padding:3px 7px;border-radius:999px;background:var(--vanilla);color:#15120c;font-size:9px;font-weight:1000;letter-spacing:.08em;line-height:1;box-shadow:0 0 0 0 rgba(255,157,18,.45);animation:navNewPulse 1s ease-in-out 3}
 @keyframes navNewPulse{0%,100%{transform:scale(1);box-shadow:0 0 0 0 rgba(255,157,18,.35)}50%{transform:scale(1.08);box-shadow:0 0 0 6px rgba(255,157,18,0)}}
 @media (prefers-reduced-motion:reduce){.navNewBadge{animation:none}}
+
+
+/* V3.10.3 bulletin types: announcements vs required reading */
+.bulletinDetailHero{background:linear-gradient(135deg,#fff5df,#fff 72%);border-left:6px solid var(--vanilla)}
+.bulletinLead{max-width:1000px;font-size:17px;line-height:1.6}
+.bulletinSection{margin:16px 0;padding:22px;border:1px solid var(--line);border-radius:18px;background:#fff}
+.bulletinSection h3{margin:4px 0 10px;font-size:24px}.bulletinSection p{max-width:1000px;color:var(--muted)}
+.bulletinSection ul{margin:14px 0 0;padding-left:22px}.bulletinSection li+li{margin-top:8px}
+.bulletinTone-new{border-left:5px solid var(--green);background:linear-gradient(135deg,#f2fbf6,#fff)}
+.bulletinTone-warning{border-left:5px solid #d89523;background:linear-gradient(135deg,#fff7e7,#fff)}
+.bulletinDetailActions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+@media(max-width:720px){.bulletinDetailActions{align-items:stretch}.bulletinDetailActions .btn{width:100%;text-align:center}}
