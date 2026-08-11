@@ -12,7 +12,7 @@
 
 ## Direct link for staff
 
-`https://v-academy.pages.dev/#guide/chatgpt-best-practices`
+`https://v-academy.pages.dev/guide/chatgpt-best-practices`
 
 This route opens the guide inside the V | Academy layout.
 

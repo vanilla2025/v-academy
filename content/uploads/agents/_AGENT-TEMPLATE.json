@@ -1,0 +1,27 @@
+{
+  "id": "feature_example_agent",
+  "slug": "example-agent",
+  "title": "Example Agent",
+  "icon": "🤖",
+  "resourceType": "Agent",
+  "summary": "One-sentence explanation of what the agent does.",
+  "why": "Explain the business problem this agent solves and why staff should use it.",
+  "use": ["Good use case one", "Good use case two"],
+  "avoid": ["Important limitation or misuse to avoid"],
+  "methods": [
+    {
+      "number": "1",
+      "title": "Use the agent",
+      "short": "When this method is appropriate.",
+      "steps": ["Open the agent", "Provide the required input", "Review the output"],
+      "prompt": "Example prompt with [FIELDS TO REPLACE].",
+      "expected": ["Expected output one", "Expected output two"]
+    }
+  ],
+  "dataRules": ["Data or quality rule"],
+  "outputs": ["Expected deliverable"],
+  "troubleshooting": [{"title": "Common issue", "text": "What staff should do."}],
+  "faq": [{"q": "Common question?", "a": "Clear answer."}],
+  "prompts": [{"title": "Example", "text": "Useful prompt example."}],
+  "status": "draft"
+}

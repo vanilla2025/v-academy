@@ -1,0 +1,10 @@
+{
+  "id": "example-guide",
+  "slug": "example-guide",
+  "title": "Example Guide",
+  "src": "guides/example-guide/index.html",
+  "embedSrc": "guides/example-guide/index.html?embed=1",
+  "reviewed": "11/08/2026",
+  "interfaceVersion": "Applicable interface/version",
+  "status": "draft"
+}

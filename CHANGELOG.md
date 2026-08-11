@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## 3.10.0 - Content Architecture & Direct Routing (11 Aug 2026)
+
+- Added clean bookmarkable routes for Academy views, agents, workflows, guides and lessons.
+- Added Cloudflare `_redirects` fallback routing for direct-link refreshes.
+- Added uploadable content types for agents, workflows and guides.
+- Moved RentHistory Agent out of the hardcoded catalogue into an agent JSON file.
+- Added content templates and expanded the content-maintenance guide.
+- Kept existing learner state, reporting and Apps Script integration unchanged.
+
 ## 3.9.0 - RentHistory Agent Staff Guide (11 Aug 2026)
 
 - Added a dedicated RentHistory Agent training page inside Tools & Workflows.

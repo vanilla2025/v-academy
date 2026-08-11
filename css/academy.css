@@ -49,7 +49,7 @@
 @media(max-width:1000px){.builderGrid{grid-template-columns:1fr}.builderOutput{position:static}.builderOutput .promptPreview{min-height:260px}.builderOutput .promptPreview pre{min-height:230px}}
 
 
-/* V3.9.0 RentHistory Agent training page */
+/* V3.10.0 content-driven agent pages */
 .agentHero{border-left:6px solid var(--green)}
 .agentHero>p{max-width:920px;font-size:17px}
 .agentMethodGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:18px}

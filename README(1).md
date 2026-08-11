@@ -1,89 +1,53 @@
-# V \| Academy
+# V | Academy
 
-**Version:** 3.9.0 -- RentHistory Agent Staff Guide\
+**Version:** 3.10.0 — Content Architecture & Direct Routing  
 **Release Date:** 11 August 2026
 
 ## Overview
 
-V \| Academy has evolved from a training website into an AI-enabled
-operational learning platform for Vanilla Rentals.
+V | Academy is Vanilla Rentals' AI-enabled operational learning platform. It combines training, reusable workflows, agent guidance, required staff updates and practical AI capability guidance inside one consistent Academy shell.
 
-This release changes the focus from teaching ChatGPT features to
-teaching real workplace workflows supported by AI.
+## V3.10.0 Highlights
 
-## What's New
+- Separated the Academy platform from uploadable content.
+- Added upload folders for agents, workflows and guides alongside courses and announcements.
+- Moved the RentHistory Agent out of the hardcoded catalogue and into `content/uploads/agents/rent-history-agent.json`.
+- Added clean, bookmarkable routes such as `/agent/rent-history` and `/guide/chatgpt-best-practices`.
+- Added Cloudflare fallback routing via `_redirects`, so refreshing a direct content link keeps the Academy interface intact.
+- Kept local-file testing compatible by using hash-based routes only when the site is opened from `file://`.
+- Existing learner state, Bulletin Board acknowledgement tracking, Prompt Builder, Google Sheet reporting and Apps Script integration remain in place.
 
-### New Philosophy
+## Content model
 
--   Workflow-first learning rather than feature-first learning.
--   AI Foundations teaches practical day-to-day work.
--   AI Features acts as a capability reference library.
--   Toolbox becomes a reusable workflow library.
+Normal content lives under `content/uploads/`:
 
-### V3.9.0 Highlights
+- `announcements/`
+- `courses/`
+- `agents/`
+- `workflows/`
+- `guides/`
 
-- Added a dedicated RentHistory Agent staff guide under Tools & Workflows.
-- Covers address-only reports, CMA uploads, CMA insertion and multi-property batches.
-- Includes copyable prompts, data rules, warnings, expected outputs, troubleshooting, Kristie escalation and FAQ.
-- Keeps the V3.8 interactive Prompt Builder and VORSI guidance unchanged.
+Run `npm run build` to rebuild `content/uploads-manifest.js`. Cloudflare Pages does this automatically when configured with the build command.
 
-### AI Foundations
+## Platform files
 
--   Removed Canvas.
--   Expanded Gmail with practical prompt packs.
--   Expanded Google Calendar with practical prompt packs.
--   Expanded Prompt Builder.
--   Expanded Documents module.
--   Expanded AI Safety.
--   Added Work Smarter module.
+These should change much less often:
 
-### Learning Paths
+- `js/app.js`
+- `js/config.js`
+- `js/sync.js`
+- `css/academy.css`
+- `index.html`
+- `apps-script/Code.gs`
 
-**Business Development** - Owner preparation - Objection handling -
-Marketing workflows - Follow-up workflows
+## Cloudflare Pages
 
-**Property Manager** - Maintenance - Inspections - Lease renewals -
-Owner communication - Tribunal preparation - Compliance
+- Build command: `npm run build`
+- Build output directory: `.`
+- Root directory: blank
 
-**PM Assistant** - Applications - Scheduling - Inbox management -
-Documents - Keys - Daily administration
+The `_redirects` file must remain in the published root for direct Academy URLs to work after refresh.
 
-**Administration** - Reception - Phones - SOPs - Reporting - Staff
-communication
+## Reporting
 
-### Toolbox
-
--   Unlimited pinned workflows
--   Drag-and-drop ordering
--   Reusable workflow library
-
-### Google Sheets
-
-No database changes required.
-
-Existing Apps Script remains compatible.
-
-### Permissions
-
-Existing Learner / Trainer / Administrator model retained.
-
-## Upgrade
-
-1.  Replace website files.
-2.  Keep current Code.gs.
-3.  Test profile saving.
-4.  Test progress synchronisation.
-5.  Test Administration.
-6.  Publish to Cloudflare.
-
-## Roadmap
-
-Planned for future versions:
-
--   Workflow Generator
--   Team Analytics Dashboard
--   Leaderboards
--   AI Usage Insights
--   Course Versioning
--   Interactive assessments
--   Screenshot-based lessons
+No Google Sheet schema change is required for V3.10. Existing Apps Script and reporting behaviour are retained.

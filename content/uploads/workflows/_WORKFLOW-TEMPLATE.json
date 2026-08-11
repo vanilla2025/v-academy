@@ -1,0 +1,12 @@
+{
+  "id": "example-workflow",
+  "slug": "example-workflow",
+  "title": "Example Workflow",
+  "icon": "🧰",
+  "summary": "What this reusable workflow helps staff accomplish.",
+  "when": ["Use case one", "Use case two"],
+  "needs": ["Information staff should have ready"],
+  "steps": ["Step one", "Step two", "Step three"],
+  "prompt": "A complete, useful prompt with [FIELDS TO REPLACE].",
+  "status": "draft"
+}

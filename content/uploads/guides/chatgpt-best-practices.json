@@ -1,0 +1,10 @@
+{
+  "id": "chatgpt-best-practices",
+  "slug": "chatgpt-best-practices",
+  "title": "ChatGPT Best Practices",
+  "src": "guides/chatgpt-best-practices/index.html",
+  "embedSrc": "guides/chatgpt-best-practices/index.html?embed=1",
+  "reviewed": "03/08/2026",
+  "interfaceVersion": "ChatGPT Web and Desktop — August 2026",
+  "status": "published"
+}
