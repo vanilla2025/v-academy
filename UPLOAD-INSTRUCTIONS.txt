@@ -1,32 +1,37 @@
-V | Academy 3.10.4 - NEW badge on individual resource cards
+V | Academy 3.11.0 - Sidebar Navigation & Profile Dock
 
-WHAT THIS PATCH DOES
-- Adds a NEW badge directly to newly released Tool / Agent cards.
-- RentHistory Agent will show NEW inside Tools & Workflows while it is unseen.
-- The Tools & Workflows sidebar NEW badge and the RentHistory card NEW badge use the same seen state.
-- Opening RentHistory Agent clears both badges for that user/browser.
-- The card badge does not blink; the sidebar badge keeps the existing gentle pulse.
+This is a PLATFORM PATCH. Do not delete or replace the whole repository.
 
-FILES TO REPLACE
-Copy these files into the matching folders in your existing v-academy repository and choose Replace when prompted:
+Replace these files in your existing v-academy repository:
 
-1. js/app.js
-2. js/config.js
-3. css/academy.css
+  js/app.js
+  js/config.js
+  css/academy.css
+  package.json
+  CHANGELOG.md
+  README(1).md
 
-DO NOT delete or replace the rest of your site.
-No Apps Script or Google Sheet change is required.
+Then commit and push to main. Cloudflare should deploy automatically.
 
-DEPLOYMENT
-1. Copy the three files above into your local GitHub v-academy folder.
-2. Commit and push to main.
-3. Wait for Cloudflare Pages to deploy.
-4. Refresh the site with Ctrl + F5.
-5. Confirm the sidebar shows Version 3.10.4.
+After deployment, Ctrl + F5 and confirm:
 
-TEST
-- Use a browser/profile that has not yet opened RentHistory Agent.
-- Tools & Workflows should show NEW in the sidebar.
-- Open Tools & Workflows. The RentHistory Agent card should also show NEW.
-- Click Open agent guide.
-- Return to Tools & Workflows. Both the sidebar and card NEW badges should be gone.
+1. Sidebar primary navigation is now:
+   - Home
+   - Bulletin Board
+   - Learn
+   - Tools & Workflows
+
+2. Progress and Settings are no longer primary menu items.
+
+3. Profile is anchored at the bottom of the sidebar.
+   - Click name/role to open Profile & Settings.
+   - Click the progress bar/text to open Progress.
+
+4. Pinned tools appear between primary navigation and the profile dock.
+   - Up to 5 pins are shown.
+   - If more than 5 are pinned, View all appears.
+   - Opening or unpinning a visible item still works.
+
+5. Version text shows 3.11.0.
+
+No Apps Script, Google Sheet, content JSON or reporting changes are required for this patch.

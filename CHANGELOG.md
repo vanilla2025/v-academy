@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## 3.11.0 - Sidebar Navigation & Profile Dock (11 Aug 2026)
+
+- Simplified primary navigation to Home, Bulletin Board, Learn, and Tools & Workflows.
+- Moved profile, settings access, and overall progress into a compact dock anchored at the bottom of the sidebar.
+- Made the overall progress bar a direct link to the Progress page.
+- Removed standalone Progress and Settings links from primary navigation while preserving both pages.
+- Limited sidebar pinned-tool shortcuts to five visible items and added a View all link when more are pinned.
+- Kept NEW badges and existing content/reporting behaviour unchanged.
+
 ## 3.10.1 - Content Architecture & Direct Routing (11 Aug 2026)
 
 - Added clean bookmarkable routes for Academy views, agents, workflows, guides and lessons.
