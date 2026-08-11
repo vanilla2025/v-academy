@@ -1,13 +1,13 @@
 # V | Academy
 
-**Version:** 3.10.0 — Content Architecture & Direct Routing  
+**Version:** 3.10.1 — Content Architecture & Direct Routing  
 **Release Date:** 11 August 2026
 
 ## Overview
 
 V | Academy is Vanilla Rentals' AI-enabled operational learning platform. It combines training, reusable workflows, agent guidance, required staff updates and practical AI capability guidance inside one consistent Academy shell.
 
-## V3.10.0 Highlights
+## V3.10.1 Highlights
 
 - Separated the Academy platform from uploadable content.
 - Added upload folders for agents, workflows and guides alongside courses and announcements.

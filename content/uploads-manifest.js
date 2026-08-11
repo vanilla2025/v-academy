@@ -1,5 +1,5 @@
 window.ACADEMY_UPLOADS = {
-  "generatedAt": "2026-08-11T01:50:38.214Z",
+  "generatedAt": "2026-08-11T02:25:32.641Z",
   "announcements": [
     {
       "id": "chatgpt-best-practices-2026-08",
@@ -17,6 +17,23 @@ window.ACADEMY_UPLOADS = {
       "required": true,
       "acknowledgement": "required",
       "estimatedReadTime": "5 mins"
+    },
+    {
+      "id": "academy-update-renthistory-read-only-2026-08",
+      "title": "New RentHistory Agent + temporary Google Plugin limits",
+      "summary": "The RentHistory Agent is now available. Gmail, Google Calendar and Google Drive Plugins are currently limited to Read access, so prompts that need to send, create, edit, move, delete or share will not complete until write access is restored.",
+      "badge": "Academy update",
+      "published": "11/08/2026",
+      "priority": 80,
+      "status": "published",
+      "destination": {
+        "type": "agent",
+        "id": "rent-history-agent"
+      },
+      "linkText": "Open RentHistory Agent",
+      "required": false,
+      "acknowledgement": "optional",
+      "estimatedReadTime": "1 min"
     }
   ],
   "courses": [],

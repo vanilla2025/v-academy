@@ -1,5 +1,5 @@
 window.ACADEMY_CONFIG = {
-  version: '3.10.0',
+  version: '3.10.1',
   updated: '11 August 2026',
   syncUrl: 'https://script.google.com/macros/s/AKfycbxdqtdKgIBi9hD0N63FLNOFPLPxgLUA05lGGz-ft1I39ihZQfnqktsZ5s9i6Ib3CP9Zvw/exec',
   adminPinLabel: 'Administrator Access',

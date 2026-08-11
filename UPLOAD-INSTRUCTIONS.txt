@@ -1,0 +1,26 @@
+V | Academy 3.10.1 - upload instructions
+
+This is a PATCH package. Do not delete the rest of the repository.
+Replace/add the following files in GitHub, preserving these exact repository paths:
+
+1. js/app.js                         <- file supplied as js_app.js
+2. js/config.js                      <- file supplied as js_config.js
+3. css/academy.css
+4. content/catalog.js
+5. content/uploads-manifest.js
+6. content/uploads/announcements/2026-08-renthistory-and-plugin-read-only.json
+7. CHANGELOG.md
+8. README(1).md
+9. package.json
+
+IMPORTANT: Rename js_app.js to app.js inside the repository js folder.
+IMPORTANT: Rename js_config.js to config.js inside the repository js folder.
+
+Then commit/push to main. Cloudflare Pages should deploy automatically.
+After deployment, hard refresh V | Academy (Ctrl+F5).
+
+Checks:
+- Sidebar version says 3.10.1.
+- Bulletin Board shows "New RentHistory Agent + temporary Google Plugin limits".
+- Gmail, Calendar, and Plugins & Connected Apps pages show an amber Temporary access notice.
+- RentHistory Agent still opens at /agent/rent-history.

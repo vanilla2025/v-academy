@@ -44,7 +44,7 @@ window.ACADEMY_CATALOG = {
           ],
           "avoid": [
             "Do not let AI decide priorities without your judgement",
-            "Do not let AI send messages or move appointments without review"
+            "Gmail, Calendar and Drive Plugins are currently Read-only. Use them to review, search and prepare; complete any send, create, move, edit or delete action yourself in the Google app."
           ],
           "prompts": [
             {
@@ -67,7 +67,7 @@ window.ACADEMY_CATALOG = {
           "mission": [
             "Run the Daily plan prompt with your real Calendar/Gmail.",
             "Pick one follow-up or preparation task it finds.",
-            "Do that task or create a reminder for it.",
+            "Do that task yourself. If it needs a reminder or calendar change, create it manually in Google Calendar while Plugin access is Read-only.",
             "Record your confidence."
           ],
           "congrats": "You now have a repeatable morning workflow. This is the habit that turns AI from a novelty into daily leverage."
@@ -927,14 +927,14 @@ window.ACADEMY_CATALOG = {
           "tools": [
             "Calendar"
           ],
-          "why": "Scheduling is not just picking a time. AI can help build better descriptions, reminders and preparation notes.",
+          "why": "Scheduling is not just picking a time. AI can help plan descriptions, reminders and preparation notes. While the Google Calendar Plugin is Read-only, ChatGPT can review the calendar and draft what you need, but you must create or change the event yourself.",
           "when": [
             "Inspection booking",
             "Appointment setup",
             "Reminder planning"
           ],
           "avoid": [
-            "Do not create appointments without checking attendees"
+            "Google Calendar Plugin access is currently Read-only: ChatGPT cannot create, move, accept, cancel or edit appointments. Make the final change yourself in Calendar after checking attendees."
           ],
           "prompts": [
             {
@@ -947,10 +947,10 @@ window.ACADEMY_CATALOG = {
             }
           ],
           "mission": [
-            "Create a calendar description for a sample appointment.",
+            "Draft a calendar description for a sample appointment, then add it manually in Google Calendar if needed.",
             "Add preparation and follow-up notes."
           ],
-          "congrats": "You can now create more useful calendar entries."
+          "congrats": "You can now prepare more useful calendar entries and add them manually while Calendar access is Read-only."
         }
       }
     },
@@ -1124,6 +1124,7 @@ window.ACADEMY_CATALOG = {
       "title": "Gmail",
       "icon": "📧",
       "summary": "Use email context for triage, summaries, follow-up and safer drafting.",
+      "notice": "TEMPORARY ACCESS NOTE — Gmail Plugin access is currently Read-only. ChatGPT can search, read, summarise and draft, but it cannot send, reply, archive, label, delete or otherwise change Gmail. Complete write actions yourself in Gmail.",
       "why": "Gmail is one of the highest-value integrations because it connects AI to real conversations instead of forcing staff to copy/paste threads.",
       "use": [
         "Morning triage",
@@ -1157,6 +1158,7 @@ window.ACADEMY_CATALOG = {
       "title": "Calendar",
       "icon": "📅",
       "summary": "Use calendar context to prepare the day, appointments and follow-up blocks.",
+      "notice": "TEMPORARY ACCESS NOTE — Google Calendar Plugin access is currently Read-only. ChatGPT can review events and suggest plans, but it cannot create, edit, move, accept, decline or cancel events. Make those changes yourself in Calendar.",
       "why": "Calendar turns AI into a daily planning assistant. It helps staff prepare, not just remember meeting times.",
       "use": [
         "Planning the day",
@@ -1179,7 +1181,7 @@ window.ACADEMY_CATALOG = {
         },
         {
           "title": "Find focus time",
-          "text": "Review tomorrow’s calendar and suggest where I can block one hour for uninterrupted admin work."
+          "text": "Review tomorrow’s calendar and identify the best three options for a one-hour uninterrupted admin block. For each option, explain why it fits, allow for travel/preparation around nearby appointments, and flag any trade-off. Do not create or change any event; I will add the block manually."
         }
       ]
     },
@@ -1188,6 +1190,7 @@ window.ACADEMY_CATALOG = {
       "title": "Plugins & Connected Apps",
       "icon": "🔗",
       "summary": "Learn how to find an approved Plugin, connect the correct work account, check permissions, use it safely and disconnect it when required.",
+      "notice": "CURRENT VORSI SETTING — Gmail, Google Calendar and Google Drive Plugins are temporarily limited to Read access. Read/search/review prompts will work; prompts that require sending, creating, editing, moving, deleting, sharing or other write actions will not complete until write access is restored.",
       "why": "In the current VORSI ChatGPT workspace, external service connections are managed under Plugins. A Plugin can let ChatGPT work with authorised information from services such as Gmail, Calendar, Drive, Contacts, LinkedIn and GitHub. This can reduce copying and pasting, but access depends on workspace approval and the permissions granted to the individual Plugin.",
       "use": [
         "Open ChatGPT Settings and select Plugins. This is the location staff should look for in the current VORSI workspace.",
@@ -1220,7 +1223,7 @@ window.ACADEMY_CATALOG = {
         },
         {
           "title": "4. Review permissions",
-          "text": "Read exactly what the Plugin is asking to access. Prefer read/search access unless an approved work task genuinely requires a write action."
+          "text": "Read exactly what the Plugin is asking to access. Gmail, Google Calendar and Google Drive are currently restricted to Read access in VORSI, so do not expect write actions to work until that setting is changed."
         },
         {
           "title": "5. Test it safely",

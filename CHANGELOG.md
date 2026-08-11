@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## 3.10.0 - Content Architecture & Direct Routing (11 Aug 2026)
+## 3.10.1 - Content Architecture & Direct Routing (11 Aug 2026)
 
 - Added clean bookmarkable routes for Academy views, agents, workflows, guides and lessons.
 - Added Cloudflare `_redirects` fallback routing for direct-link refreshes.
