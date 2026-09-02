@@ -1,0 +1,18 @@
+{
+  "id": "chatgpt-usage-analytics-storage-cloud-browser-2026-09",
+  "title": "NEW: ChatGPT Usage, Analytics, Storage & Cloud Browser",
+  "summary": "Understand the new 5-hour and weekly usage meters, read Analytics, manage saved files before storage fills up, and use Cloud Browser safely.",
+  "badge": "NEW · Required reading",
+  "published": "03/09/2026",
+  "priority": 200,
+  "status": "published",
+  "destination": {
+    "type": "guide",
+    "id": "chatgpt-best-practices"
+  },
+  "linkText": "Read the update",
+  "required": true,
+  "acknowledgement": "required",
+  "estimatedReadTime": "8 mins",
+  "showAsNew": true
+}

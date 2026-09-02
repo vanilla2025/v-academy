@@ -1,5 +1,5 @@
 window.ACADEMY_UPLOADS = {
-  "generatedAt": "2026-08-11T03:00:16.590908Z",
+  "generatedAt": "2026-09-02T23:02:47.519Z",
   "announcements": [
     {
       "id": "chatgpt-best-practices-2026-08",
@@ -73,6 +73,24 @@ window.ACADEMY_UPLOADS = {
           "style": "secondary"
         }
       ]
+    },
+    {
+      "id": "chatgpt-usage-analytics-storage-cloud-browser-2026-09",
+      "title": "NEW: ChatGPT Usage, Analytics, Storage & Cloud Browser",
+      "summary": "Understand the new 5-hour and weekly usage meters, read Analytics, manage saved files before storage fills up, and use Cloud Browser safely.",
+      "badge": "NEW · Required reading",
+      "published": "03/09/2026",
+      "priority": 200,
+      "status": "published",
+      "destination": {
+        "type": "guide",
+        "id": "chatgpt-best-practices"
+      },
+      "linkText": "Read the update",
+      "required": true,
+      "acknowledgement": "required",
+      "estimatedReadTime": "8 mins",
+      "showAsNew": true
     }
   ],
   "courses": [],
@@ -267,8 +285,8 @@ window.ACADEMY_UPLOADS = {
       "title": "ChatGPT Best Practices",
       "src": "guides/chatgpt-best-practices/index.html",
       "embedSrc": "guides/chatgpt-best-practices/index.html?embed=1",
-      "reviewed": "03/08/2026",
-      "interfaceVersion": "ChatGPT Web and Desktop — August 2026",
+      "reviewed": "03/09/2026",
+      "interfaceVersion": "ChatGPT Web and Desktop — September 2026",
       "status": "published"
     }
   ]

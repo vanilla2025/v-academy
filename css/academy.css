@@ -121,3 +121,11 @@
 .profileProgress span{display:block;color:#ffd37a;font-size:10px;font-weight:800}
 .sidebarVersion{margin:5px 8px 0;color:rgba(255,211,122,.72);font-size:10px}
 @media (max-width:850px){.left{height:auto;overflow:visible}.pinList{overflow:visible}.profileDock{margin-top:12px}}
+
+/* V3.11.1: keep long guide metadata and acknowledgement actions readable. */
+@media (max-width:1350px){
+  .guideToolbar{align-items:flex-start;flex-wrap:wrap}
+  .guideTitleBlock{order:3;flex:1 0 100%;align-items:flex-start!important}
+  .guideProgressLine{width:100%}
+  .guideActions{margin-left:auto}
+}

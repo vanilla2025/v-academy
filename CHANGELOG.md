@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 3.11.1 - Usage, Analytics, Storage & Cloud Browser (3 Sep 2026)
+
+- Added a NEW required-reading bulletin covering ChatGPT Usage, Analytics, Storage and Cloud Browser.
+- Expanded the ChatGPT Best Practices guide with the new 5-hour and weekly meters, credits and reset guidance.
+- Added practical explanations for Analytics, Library storage management and Cloud Browser permissions, sign-ins and browser data.
+- Added nine current screenshots captured from the September 2026 ChatGPT Desktop interface.
+- Updated guide-to-bulletin tracking so a newer required-reading notice can safely point to an existing guide without reusing an older acknowledgement.
+
 ## 3.11.0 - Sidebar Navigation & Profile Dock (11 Aug 2026)
 
 - Simplified primary navigation to Home, Bulletin Board, Learn, and Tools & Workflows.
